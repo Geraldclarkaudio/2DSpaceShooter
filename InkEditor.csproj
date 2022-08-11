@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{ADABDFEE-A39C-856C-66F1-BFBF68688150}</ProjectGuid>
+    <ProjectGuid>{A6FD374C-7728-3A41-D112-32DC9202FD5A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>InkEditor</AssemblyName>
@@ -664,7 +664,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Ink-Libraries.csproj">
-      <Project>{FFEABB76-2474-8F9E-3A8C-75FFF782AEB4}</Project>
+      <Project>{81D56FAF-4D8C-F4FC-2615-EE0547BFB719}</Project>
       <Name>Ink-Libraries</Name>
     </ProjectReference>
   </ItemGroup>

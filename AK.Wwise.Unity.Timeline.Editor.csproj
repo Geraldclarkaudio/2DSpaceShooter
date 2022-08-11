@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F36B57DB-DEE1-88B5-8DFC-10EBE28B247C}</ProjectGuid>
+    <ProjectGuid>{41EFFFF2-A373-0376-6BC3-9341520611C0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>AK.Wwise.Unity.Timeline.Editor</AssemblyName>
@@ -652,19 +652,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="AK.Wwise.Unity.API.csproj">
-      <Project>{4E8741F1-10AB-03CD-84B3-D9DFC5BBE88C}</Project>
+      <Project>{BC03F222-9E9E-4D95-FA3B-DF39612B7E3A}</Project>
       <Name>AK.Wwise.Unity.API</Name>
     </ProjectReference>
     <ProjectReference Include="AK.Wwise.Unity.Timeline.csproj">
-      <Project>{8EEC4CF4-0C26-0D5E-A5BE-2C74C779CF3C}</Project>
+      <Project>{15727653-95EE-A89F-9DB9-B9ECF28909E7}</Project>
       <Name>AK.Wwise.Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="AK.Wwise.Unity.API.Editor.csproj">
-      <Project>{83CB11AE-25BB-80CE-0258-C8C32C59C66A}</Project>
+      <Project>{5CBDD99D-6B8C-5307-4E1F-2091E974FF18}</Project>
       <Name>AK.Wwise.Unity.API.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="AK.Wwise.Unity.API.WwiseTypes.csproj">
-      <Project>{149EF6BB-9DD3-22A9-59B0-BC23FC70704E}</Project>
+      <Project>{2A778C04-1584-1A42-040C-108A2DFA160C}</Project>
       <Name>AK.Wwise.Unity.API.WwiseTypes</Name>
     </ProjectReference>
   </ItemGroup>
