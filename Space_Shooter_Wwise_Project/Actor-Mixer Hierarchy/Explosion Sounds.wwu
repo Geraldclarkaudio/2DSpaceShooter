@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0D09E728-61AF-4209-B821-EBFA5FAEA7B2}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Explosion Sounds" ID="{0D09E728-61AF-4209-B821-EBFA5FAEA7B2}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="21"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Sound Name="Explosion1" ID="{A9D44344-5400-4499-B4E2-8A6EED4EE75A}" ShortID="908243605">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{DFAC1999-44A8-4D83-A725-C83FDBC07B26}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83E48073-DCB4-4180-8744-C4734CA7D463}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C5DB3F2C-86BE-47D9-AFBC-6094A48500F1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="AsteroidExplode" ID="{97C33E73-DD48-4057-97B3-7290EFE8FA80}">
+							<Language>SFX</Language>
+							<AudioFile>AsteroidExplode.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="477172615"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="AsteroidExplode" ID="{97C33E73-DD48-4057-97B3-7290EFE8FA80}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

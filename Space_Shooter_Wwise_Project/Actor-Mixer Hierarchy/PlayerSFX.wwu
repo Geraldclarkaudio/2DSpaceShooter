@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{59FE9203-3612-40CE-8034-DFF64BA4FA8F}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="PlayerSFX" ID="{59FE9203-3612-40CE-8034-DFF64BA4FA8F}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="4"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<Sound Name="LaserFire" ID="{16A2EDFC-3DB0-41D6-88F1-3918CBF12809}" ShortID="441146958">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{FA84A58F-2C53-48F7-9B58-A91C5D503933}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="14"/>
+											<Property Name="Min" Type="Real64" Value="-7"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{0749CEC8-6F29-4FBF-B10F-89A7955D784D}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="253"/>
+											<Property Name="Min" Type="Real64" Value="-126"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{2B94684A-FC3C-45D3-9A0E-7BC0E04596CE}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="3"/>
+											<Property Name="Min" Type="Real64" Value="-3"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83E48073-DCB4-4180-8744-C4734CA7D463}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C5DB3F2C-86BE-47D9-AFBC-6094A48500F1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Laser2" ID="{E725BEAA-D377-4727-9130-1E142AA3BA1D}">
+							<Language>SFX</Language>
+							<AudioFile>Laser2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="765398132"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Laser2" ID="{E725BEAA-D377-4727-9130-1E142AA3BA1D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

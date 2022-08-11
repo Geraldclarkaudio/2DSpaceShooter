@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A5470E8F-8687-4FBE-887D-9D6D46F5BC1E}" SchemaVersion="103">
+	<Switches>
+		<WorkUnit Name="Music" ID="{A5470E8F-8687-4FBE-887D-9D6D46F5BC1E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="ArticleSwitches" ID="{33427DF2-A153-4F90-8EE5-33BC4E1D2957}" ShortID="1009991255">
+					<ChildrenList>
+						<SwitchGroup Name="Wave1" ID="{435183B9-530E-450E-AA90-C21E617A48D0}">
+							<ChildrenList>
+								<Switch Name="On" ID="{9CA2E7C9-C8F4-4A3F-B00E-FB58ACD4B76B}"/>
+								<Switch Name="Off" ID="{CB62B06A-2320-4A2C-AA10-DF68138E998D}"/>
+							</ChildrenList>
+						</SwitchGroup>
+						<SwitchGroup Name="Wave2" ID="{5BD4162A-C365-4C1F-B229-74B2B96542FD}">
+							<ChildrenList>
+								<Switch Name="On" ID="{46FA86CB-375D-4CC5-9343-8CCAA612B231}"/>
+								<Switch Name="Off" ID="{5B70E67F-CB1F-4803-9943-ADF33B57BA70}"/>
+							</ChildrenList>
+						</SwitchGroup>
+						<SwitchGroup Name="Wave3" ID="{58A0AFDC-FE9F-44F9-A4E0-2F4B91455251}">
+							<ChildrenList>
+								<Switch Name="On" ID="{51FAE5BC-5938-4A9D-B03D-E54C4623ECC7}"/>
+								<Switch Name="Off" ID="{431B223A-FE3E-4F64-AD6E-876567D94DCF}"/>
+							</ChildrenList>
+						</SwitchGroup>
+						<SwitchGroup Name="BossFight" ID="{CEDE09DD-8777-4D81-94FD-F4084FBF8F81}">
+							<ChildrenList>
+								<Switch Name="On" ID="{FB4204E8-B273-48A2-9B60-6FB1E7A390E4}"/>
+								<Switch Name="Off" ID="{4DADA10A-CF14-4841-B4C1-B46B29586763}"/>
+							</ChildrenList>
+						</SwitchGroup>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

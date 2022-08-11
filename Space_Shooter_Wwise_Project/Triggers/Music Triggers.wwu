@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E783240B-14B6-4608-BA89-E8D8BE06C874}" SchemaVersion="103">
+	<Triggers>
+		<WorkUnit Name="Music Triggers" ID="{E783240B-14B6-4608-BA89-E8D8BE06C874}" PersistMode="Standalone">
+			<ChildrenList>
+				<Trigger Name="Cymbal_Swell" ID="{7EA28BFB-C5B7-4CA9-8C5A-23C981B79097}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Triggers>
+</WwiseDocument>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{773658B7-D89C-46E9-96C5-186B678C81B5}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="DialogSFX" ID="{773658B7-D89C-46E9-96C5-186B678C81B5}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="13"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<RandomSequenceContainer Name="DialogSFX" ID="{3FA14D55-EB40-424E-8E01-BFAF7B513D22}" ShortID="246290032">
+					<PropertyList>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{F5A4ACA7-3053-4F90-87F0-F63B0B97B633}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="455"/>
+											<Property Name="Min" Type="Real64" Value="-177"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+						<Property Name="Volume" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{1E122417-655A-4AF9-B89B-3928B216CCF6}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83E48073-DCB4-4180-8744-C4734CA7D463}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C5DB3F2C-86BE-47D9-AFBC-6094A48500F1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="dialogSFX01" ID="{7003B987-BAF2-4E9F-A5BA-19799152E4C3}" ShortID="291245090">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83E48073-DCB4-4180-8744-C4734CA7D463}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C5DB3F2C-86BE-47D9-AFBC-6094A48500F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dialogSFX01" ID="{4932B823-0EEA-4D52-91A6-6403831CE28E}">
+									<Language>SFX</Language>
+									<AudioFile>dialogSFX01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="468837629"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="dialogSFX01" ID="{4932B823-0EEA-4D52-91A6-6403831CE28E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="dialogSFX02" ID="{AA13B3FE-2DB7-45BC-AC86-1A1D5077862C}" ShortID="860702444">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83E48073-DCB4-4180-8744-C4734CA7D463}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C5DB3F2C-86BE-47D9-AFBC-6094A48500F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dialogSFX02" ID="{0CE15AFC-65B5-4216-9C6E-161370E179EF}">
+									<Language>SFX</Language>
+									<AudioFile>dialogSFX02.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="843401233"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="dialogSFX02" ID="{0CE15AFC-65B5-4216-9C6E-161370E179EF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="dialogSFX03" ID="{503127DF-5791-438D-BCE2-32B11F526A2C}" ShortID="155233274">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83E48073-DCB4-4180-8744-C4734CA7D463}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C5DB3F2C-86BE-47D9-AFBC-6094A48500F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dialogSFX03" ID="{261E9458-6436-4F0E-B6D4-38C34F460CAA}">
+									<Language>SFX</Language>
+									<AudioFile>dialogSFX03.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="206171326"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="dialogSFX03" ID="{261E9458-6436-4F0E-B6D4-38C34F460CAA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="dialogSFX04" ID="{39B13C7D-3A28-4876-B8FD-0F7C4231A34A}" ShortID="301522147">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83E48073-DCB4-4180-8744-C4734CA7D463}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C5DB3F2C-86BE-47D9-AFBC-6094A48500F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dialogSFX04" ID="{CD745CA2-065C-4B17-B9EE-A7410CAF5ED2}">
+									<Language>SFX</Language>
+									<AudioFile>dialogSFX04.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="960530877"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="dialogSFX04" ID="{CD745CA2-065C-4B17-B9EE-A7410CAF5ED2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="dialogSFX05" ID="{61A425C5-DF8C-47B8-A149-63E2EE326739}" ShortID="1064569033">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83E48073-DCB4-4180-8744-C4734CA7D463}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C5DB3F2C-86BE-47D9-AFBC-6094A48500F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dialogSFX05" ID="{62E625BC-C9FC-45C0-8753-026448A8B8F7}">
+									<Language>SFX</Language>
+									<AudioFile>dialogSFX05.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="534052758"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="dialogSFX05" ID="{62E625BC-C9FC-45C0-8753-026448A8B8F7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="dialogSFX06" ID="{C0D15326-922F-4570-8BBF-54AADCCD9B1D}" ShortID="545591096">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83E48073-DCB4-4180-8744-C4734CA7D463}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C5DB3F2C-86BE-47D9-AFBC-6094A48500F1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dialogSFX06" ID="{2ABB3107-A49B-42FB-A74D-D362897B7BD6}">
+									<Language>SFX</Language>
+									<AudioFile>dialogSFX06.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1068474302"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="dialogSFX06" ID="{2ABB3107-A49B-42FB-A74D-D362897B7BD6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

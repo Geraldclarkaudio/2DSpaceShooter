@@ -1,0 +1,40 @@
+Event	ID	Name			Wwise Object Path	Notes
+	366335619	Player_Charge_Up			\SFX\Player\Player_Charge_Up	
+	753483767	Explosion1			\SFX\General\Explosion1	
+	904483370	EnemyExplode			\SFX\Enemy\EnemyExplode	
+	1849362485	Wave_Alert			\SFX\General\Wave_Alert	
+	2007110528	PowerUpCollected			\SFX\Player\PowerUpCollected	
+	2920283527	PlayerLaser			\SFX\Player\PlayerLaser	
+	3473284984	EnemyLaserFire			\SFX\Enemy\EnemyLaserFire	
+	3991942870	Music			\Music\Music	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2600048462	PowerUps			\PowerUps\PowerUps	
+
+Switch	ID	Name	Switch Group			Notes
+	640949982	Speed	PowerUps			
+	1161967626	Shield	PowerUps			
+	2134712769	TripleShot	PowerUps			
+	3554434311	Ammo	PowerUps			
+	3677180323	Health	PowerUps			
+
+Trigger	ID	Name			Wwise Object Path	Notes
+	2077047193	Cymbal_Swell			\Music Triggers\Cymbal_Swell	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	52010353	Drum	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\Drums_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Music\Music\Drum		3017840
+	88170490	LaserFire	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\LaserFire_10C4C929.wem		\Actor-Mixer Hierarchy\EnemySFX\LaserFire		352944
+	184072151	Synth	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\Bass ARP_bip_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Music\Music\Synth		3527488
+	316594298	Pad	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\Pad_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Music\Music\Pad		3528144
+	384709942	Speed	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\Dialog End_10C4C929.wem		\Actor-Mixer Hierarchy\PowerUps\Power Ups\Speed		110392
+	477172615	Explosion1	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\AsteroidExplode_10C4C929.wem		\Actor-Mixer Hierarchy\Explosion Sounds\Explosion1		1411344
+	721102396	Ammo	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\Gunshots, 9mm Smith & Wesson Handgun, Chambering Round_10C4C929.wem		\Actor-Mixer Hierarchy\PowerUps\Power Ups\Ammo		192144
+	723457850	HealthUp	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\HealthUp_10C4C929.wem		\Actor-Mixer Hierarchy\PowerUps\Power Ups\HealthUp		781864
+	745783214	TripleShot	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\ConnectLines_10C4C929.wem		\Actor-Mixer Hierarchy\PowerUps\Power Ups\TripleShot		101440
+	765398132	LaserFire	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\Laser2_10C4C929.wem		\Actor-Mixer Hierarchy\PlayerSFX\LaserFire		130788
+	772692241	Strings	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\Rhythmic trings_bip_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Music\Music\Strings		2822544
+	772774882	Cymbal Roll	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\Cymbal Roll_D79FB2B7.wem		\Interactive Music Hierarchy\Music\Stingers\CymbalRoll\Cymbal Roll		2116944
+	793912153	MiniBotExplode	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\MiniBotExplode_10C4C929.wem		\Actor-Mixer Hierarchy\EnemySFX\MiniBotExplode		1411344
+	803354570	Wave Alert	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\Correct Drag_10C4C929.wem		\Actor-Mixer Hierarchy\GameplayDriven\Wave Alert		88344
+	921443166	Shield	C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\SFX\ChargeUp_10C4C929.wem		\Actor-Mixer Hierarchy\PowerUps\Power Ups\Shield		1310464
+

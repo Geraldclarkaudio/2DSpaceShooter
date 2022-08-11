@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{52E37FFF-7DEF-41A0-A7BE-90912A2AE0E1}" SchemaVersion="103">
+	<Switches>
+		<WorkUnit Name="PowerUps" ID="{52E37FFF-7DEF-41A0-A7BE-90912A2AE0E1}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="PowerUps" ID="{AC6A3DB0-536E-4901-B514-3FD1BBAAFFB5}">
+					<ChildrenList>
+						<Switch Name="TripleShot" ID="{D6093EEC-3637-4EE6-A495-7295BBE7B1D9}"/>
+						<Switch Name="Speed" ID="{91391DFA-9700-431C-9D29-A6B6FD1C609B}"/>
+						<Switch Name="Shield" ID="{54E08103-4686-458D-87E1-D28868944ECF}"/>
+						<Switch Name="Health" ID="{3BBC2E88-93A9-4258-B2C0-C8B1F2928304}"/>
+						<Switch Name="Ammo" ID="{3E1AF524-5C44-458D-A9B5-48B18FA31A5C}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

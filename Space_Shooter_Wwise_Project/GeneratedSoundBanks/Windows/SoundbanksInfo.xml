@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="133642231" Language="SFX" Hash="3191823529">
+			<ObjectPath>\SoundBanks\General\General</ObjectPath>
+			<ShortName>General</ShortName>
+			<Path>General.bnk</Path>
+			<IncludedEvents>
+				<Event Id="904483370" Name="EnemyExplode" ObjectPath="\Events\SFX\Enemy\EnemyExplode" DurationType="OneShot" DurationMin="6.427094" DurationMax="9.957844">
+					<IncludedMemoryFiles>
+						<File Id="793912153" Language="SFX">
+							<ShortName>MiniBotExplode.wav</ShortName>
+							<Path>SFX\MiniBotExplode_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3473284984" Name="EnemyLaserFire" ObjectPath="\Events\SFX\Enemy\EnemyLaserFire" DurationType="OneShot" DurationMin="1.943064" DurationMax="2.058604">
+					<IncludedMemoryFiles>
+						<File Id="88170490" Language="SFX">
+							<ShortName>LaserFire.wav</ShortName>
+							<Path>SFX\LaserFire_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="753483767" Name="Explosion1" ObjectPath="\Events\SFX\General\Explosion1" DurationType="OneShot" DurationMin="7.550994" DurationMax="8.475705">
+					<IncludedMemoryFiles>
+						<File Id="477172615" Language="SFX">
+							<ShortName>AsteroidExplode.wav</ShortName>
+							<Path>SFX\AsteroidExplode_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Music\Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="52010353" Language="SFX">
+							<ShortName>Drums.wav</ShortName>
+							<Path>SFX\Drums_D79FB2B7.wem</Path>
+						</File>
+						<File Id="184072151" Language="SFX">
+							<ShortName>Bass ARP_bip.wav</ShortName>
+							<Path>SFX\Bass ARP_bip_D79FB2B7.wem</Path>
+						</File>
+						<File Id="316594298" Language="SFX">
+							<ShortName>Pad.wav</ShortName>
+							<Path>SFX\Pad_D79FB2B7.wem</Path>
+						</File>
+						<File Id="772692241" Language="SFX">
+							<ShortName>Rhythmic trings_bip.wav</ShortName>
+							<Path>SFX\Rhythmic trings_bip_D79FB2B7.wem</Path>
+						</File>
+						<File Id="772774882" Language="SFX">
+							<ShortName>Cymbal Roll.wav</ShortName>
+							<Path>SFX\Cymbal Roll_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="366335619" Name="Player_Charge_Up" ObjectPath="\Events\SFX\Player\Player_Charge_Up" DurationType="OneShot" DurationMin="7.428118" DurationMax="7.428118">
+					<IncludedMemoryFiles>
+						<File Id="921443166" Language="SFX">
+							<ShortName>ChargeUp.wav</ShortName>
+							<Path>SFX\ChargeUp_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2920283527" Name="PlayerLaser" ObjectPath="\Events\SFX\Player\PlayerLaser" DurationType="OneShot" DurationMin="0.639917" DurationMax="0.796524">
+					<IncludedMemoryFiles>
+						<File Id="765398132" Language="SFX">
+							<ShortName>Laser2.wav</ShortName>
+							<Path>SFX\Laser2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2007110528" Name="PowerUpCollected" ObjectPath="\Events\SFX\Player\PowerUpCollected" DurationType="OneShot" DurationMin="0.574694" DurationMax="7.428118">
+					<IncludedMemoryFiles>
+						<File Id="384709942" Language="SFX">
+							<ShortName>Dialog End.wav</ShortName>
+							<Path>SFX\Dialog End_10C4C929.wem</Path>
+						</File>
+						<File Id="721102396" Language="SFX">
+							<ShortName>Gunshots, 9mm Smith &amp; Wesson Handgun, Chambering Round.wav</ShortName>
+							<Path>SFX\Gunshots, 9mm Smith &amp; Wesson Handgun, Chambering Round_10C4C929.wem</Path>
+						</File>
+						<File Id="723457850" Language="SFX">
+							<ShortName>HealthUp.wav</ShortName>
+							<Path>SFX\HealthUp_10C4C929.wem</Path>
+						</File>
+						<File Id="745783214" Language="SFX">
+							<ShortName>ConnectLines.wav</ShortName>
+							<Path>SFX\ConnectLines_10C4C929.wem</Path>
+						</File>
+						<File Id="921443166" Language="SFX">
+							<ShortName>ChargeUp.wav</ShortName>
+							<Path>SFX\ChargeUp_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1849362485" Name="Wave_Alert" ObjectPath="\Events\SFX\General\Wave_Alert" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
+					<IncludedMemoryFiles>
+						<File Id="803354570" Language="SFX">
+							<ShortName>Correct Drag.wav</ShortName>
+							<Path>SFX\Correct Drag_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionTrigger>
+						<ActionTriggerEntry Id="2077047193" Name="Cymbal_Swell" ObjectPath="\Triggers\Music Triggers\Cymbal_Swell"/>
+					</ActionTrigger>
+				</Event>
+			</IncludedEvents>
+			<SwitchGroups>
+				<SwitchGroup Id="580146960" Name="BossFight" ObjectPath="\Switches\Music\ArticleSwitches\BossFight" GUID="{CEDE09DD-8777-4D81-94FD-F4084FBF8F81}">
+					<Switches>
+						<Switch Id="1651971902" Name="On" ObjectPath="\Switches\Music\ArticleSwitches\BossFight\On" GUID="{FB4204E8-B273-48A2-9B60-6FB1E7A390E4}"/>
+						<Switch Id="930712164" Name="Off" ObjectPath="\Switches\Music\ArticleSwitches\BossFight\Off" GUID="{4DADA10A-CF14-4841-B4C1-B46B29586763}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2453122372" Name="Wave2" ObjectPath="\Switches\Music\ArticleSwitches\Wave2" GUID="{5BD4162A-C365-4C1F-B229-74B2B96542FD}">
+					<Switches>
+						<Switch Id="1651971902" Name="On" ObjectPath="\Switches\Music\ArticleSwitches\Wave2\On" GUID="{46FA86CB-375D-4CC5-9343-8CCAA612B231}"/>
+						<Switch Id="930712164" Name="Off" ObjectPath="\Switches\Music\ArticleSwitches\Wave2\Off" GUID="{5B70E67F-CB1F-4803-9943-ADF33B57BA70}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2453122373" Name="Wave3" ObjectPath="\Switches\Music\ArticleSwitches\Wave3" GUID="{58A0AFDC-FE9F-44F9-A4E0-2F4B91455251}">
+					<Switches>
+						<Switch Id="1651971902" Name="On" ObjectPath="\Switches\Music\ArticleSwitches\Wave3\On" GUID="{51FAE5BC-5938-4A9D-B03D-E54C4623ECC7}"/>
+						<Switch Id="930712164" Name="Off" ObjectPath="\Switches\Music\ArticleSwitches\Wave3\Off" GUID="{431B223A-FE3E-4F64-AD6E-876567D94DCF}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2453122375" Name="Wave1" ObjectPath="\Switches\Music\ArticleSwitches\Wave1" GUID="{435183B9-530E-450E-AA90-C21E617A48D0}">
+					<Switches>
+						<Switch Id="1651971902" Name="On" ObjectPath="\Switches\Music\ArticleSwitches\Wave1\On" GUID="{9CA2E7C9-C8F4-4A3F-B00E-FB58ACD4B76B}"/>
+						<Switch Id="930712164" Name="Off" ObjectPath="\Switches\Music\ArticleSwitches\Wave1\Off" GUID="{CB62B06A-2320-4A2C-AA10-DF68138E998D}"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="2600048462" Name="PowerUps" ObjectPath="\Switches\PowerUps\PowerUps" GUID="{AC6A3DB0-536E-4901-B514-3FD1BBAAFFB5}">
+					<Switches>
+						<Switch Id="2134712769" Name="TripleShot" ObjectPath="\Switches\PowerUps\PowerUps\TripleShot" GUID="{D6093EEC-3637-4EE6-A495-7295BBE7B1D9}"/>
+						<Switch Id="640949982" Name="Speed" ObjectPath="\Switches\PowerUps\PowerUps\Speed" GUID="{91391DFA-9700-431C-9D29-A6B6FD1C609B}"/>
+						<Switch Id="1161967626" Name="Shield" ObjectPath="\Switches\PowerUps\PowerUps\Shield" GUID="{54E08103-4686-458D-87E1-D28868944ECF}"/>
+						<Switch Id="3677180323" Name="Health" ObjectPath="\Switches\PowerUps\PowerUps\Health" GUID="{3BBC2E88-93A9-4258-B2C0-C8B1F2928304}"/>
+						<Switch Id="3554434311" Name="Ammo" ObjectPath="\Switches\PowerUps\PowerUps\Ammo" GUID="{3E1AF524-5C44-458D-A9B5-48B18FA31A5C}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+			<Triggers>
+				<Trigger Id="2077047193" Name="Cymbal_Swell" ObjectPath="\Triggers\Music Triggers\Cymbal_Swell"/>
+			</Triggers>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3413456938">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

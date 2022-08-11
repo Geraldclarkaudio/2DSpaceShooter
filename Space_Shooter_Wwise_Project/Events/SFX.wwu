@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{DD1811AE-7799-4DD3-BD2A-BE9FDE25497E}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="SFX" ID="{DD1811AE-7799-4DD3-BD2A-BE9FDE25497E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Player" ID="{02B0D565-E5E2-48C3-8776-ADA7FD11C0A4}" ShortID="698729924">
+					<ChildrenList>
+						<Event Name="PlayerLaser" ID="{226F304A-F4CA-42C7-BD5D-C90E713F223A}">
+							<ChildrenList>
+								<Action Name="" ID="{DABE87F3-E672-49C5-96E2-8FB6BDFC7401}" ShortID="384008560">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LaserFire" ID="{16A2EDFC-3DB0-41D6-88F1-3918CBF12809}" WorkUnitID="{59FE9203-3612-40CE-8034-DFF64BA4FA8F}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Charge_Up" ID="{6CBB177B-1211-4A07-A564-AFB6C6E52E1C}">
+							<ChildrenList>
+								<Action Name="" ID="{8DAEDD5E-0E4B-42E0-9BF9-068A130B49D2}" ShortID="48840521">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Shield" ID="{41A634E3-EFFF-4AF3-9929-4CBE03FF5B38}" WorkUnitID="{D32EDF9B-7C3F-4BB6-9702-6F162A2B9CE6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PowerUpCollected" ID="{6327A83A-E4C8-49ED-BCE5-F169912BDEEF}">
+							<ChildrenList>
+								<Action Name="" ID="{3BB717DE-97A7-4D99-AAEF-029B2E435832}" ShortID="568258176">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Power Ups" ID="{5ECE75CE-41F1-43B9-80E8-61B52DB75902}" WorkUnitID="{D32EDF9B-7C3F-4BB6-9702-6F162A2B9CE6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemy" ID="{DC09AED1-C602-419C-9D55-5590244AD854}" ShortID="868383690">
+					<ChildrenList>
+						<Event Name="EnemyLaserFire" ID="{1E74CE24-1F62-482E-834B-0B99963474CC}">
+							<ChildrenList>
+								<Action Name="" ID="{B9275528-B964-40D8-8CFD-27617AFFF9BF}" ShortID="871332575">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LaserFire" ID="{62BF72A7-2C60-4671-B95E-29EA10231B61}" WorkUnitID="{406A8845-B232-43D8-9059-F401AA9205F6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="EnemyExplode" ID="{0A0E271E-B860-4F74-981B-08FC5C06603A}">
+							<ChildrenList>
+								<Action Name="" ID="{8171BFF3-F6F4-4E6A-9470-401C10BD63C1}" ShortID="487172509">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MiniBotExplode" ID="{B27CC925-012F-42EC-82B3-0E67B065E165}" WorkUnitID="{406A8845-B232-43D8-9059-F401AA9205F6}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="General" ID="{2E94D43C-A364-4F79-982E-60D6D599C8C5}" ShortID="932892719">
+					<ChildrenList>
+						<Event Name="Explosion1" ID="{9304C1FC-10A1-4FF6-B8B5-47C9DEF929E1}">
+							<ChildrenList>
+								<Action Name="" ID="{FBAD9966-3EFC-422E-A1FD-554C9BFCFB60}" ShortID="607632708">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Explosion1" ID="{A9D44344-5400-4499-B4E2-8A6EED4EE75A}" WorkUnitID="{0D09E728-61AF-4209-B821-EBFA5FAEA7B2}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Wave_Alert" ID="{9CC79DA2-CF82-4D6C-B922-F0672876F3B5}">
+							<ChildrenList>
+								<Action Name="" ID="{96642CDE-D391-4ECB-B158-94221D4421C5}" ShortID="543882312">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Wave Alert" ID="{B815829E-05FB-417E-8E2B-448A9C1CC64D}" WorkUnitID="{3DA57D24-B1B7-4FF2-8911-7C48AA7B34D4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EC2EF4D4-490A-4A25-A3B5-0D27D5BFA8B7}" ShortID="737312352">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cymbal_Swell" ID="{7EA28BFB-C5B7-4CA9-8C5A-23C981B79097}" WorkUnitID="{E783240B-14B6-4608-BA89-E8D8BE06C874}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

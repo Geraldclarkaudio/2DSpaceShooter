@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3DA57D24-B1B7-4FF2-8911-7C48AA7B34D4}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="GameplayDriven" ID="{3DA57D24-B1B7-4FF2-8911-7C48AA7B34D4}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Wave Alert" ID="{B815829E-05FB-417E-8E2B-448A9C1CC64D}" ShortID="788791127">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83E48073-DCB4-4180-8744-C4734CA7D463}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C5DB3F2C-86BE-47D9-AFBC-6094A48500F1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Correct Drag" ID="{7CC66501-8FB7-4385-972E-6A8737DCCFBB}">
+							<Language>SFX</Language>
+							<AudioFile>Correct Drag.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="803354570"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Correct Drag" ID="{7CC66501-8FB7-4385-972E-6A8737DCCFBB}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
