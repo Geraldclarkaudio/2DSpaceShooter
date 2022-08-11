@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f5ad45e4310894fa6de3d6bcc9883e, type: 3}
+  m_Name: 226F304A-F4CA-42C7-BD5D-C90E713F223A
+  m_EditorClassIdentifier: 
+  objectName: PlayerLaser
+  id: 2920283527
+  guid: 226F304A-F4CA-42C7-BD5D-C90E713F223A
