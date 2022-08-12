@@ -372,7 +372,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 38f42eda31c8454fbe8f0db36a3af219
     GuidInternal: 
-    m_lastTime: -8585413665599227123
+    m_lastTime: -8585412975293323411
     List: []
   - PhysicalPath: Events\Music.wwu
     PathAndIcons:
@@ -415,7 +415,7 @@ MonoBehaviour:
     ParentPath: Events\SFX
     guid: ae1118dd9977d34dbd2abe9fde25497e
     GuidInternal: 
-    m_lastTime: -8585413665599207167
+    m_lastTime: -8585412975293084050
     List:
     - name: Enemy
       guid: d1ae09dc02c69c419d555590244ad854
@@ -511,6 +511,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Dialog
+      guid: 2626f79e210a834480a3cf8e516a916d
+      id: 740168818
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: ae1118dd9977d34dbd2abe9fde25497e
+      - ElementName: Enemy
+        ObjectType: 4
+        guid: d1ae09dc02c69c419d555590244ad854
+      - ElementName: Play_Dialog
+        ObjectType: 3
+        guid: 2626f79e210a834480a3cf8e516a916d
+      Path: Events\SFX\Enemy\Play_Dialog
+      maxAttenuation: 0
+      maxDuration: 0.531947
+      minDuration: 0.242677
     - name: Player
       guid: 65d5b002e2e5c3488776ada7fd11c0a4
       id: 1069431850
