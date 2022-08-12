@@ -102,7 +102,6 @@
     <None Include="Assets\Art Assets\craftpix-781145-free-space-shooter-game-objects\TXT\readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Art Assets\craftpix-544820-free-sci-fi-icons-space-objects\License.txt" />
-    <None Include="Assets\Wwise\Version.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -112,7 +111,6 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\WwiseSettings.xml" />
     <None Include="Assets\Fonts\earth_orbiter\earthorbiter.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
@@ -681,30 +679,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Ak.Wwise.Api.WAAPI.csproj">
-      <Project>{C8CE9924-593F-68CF-581F-290C9521915B}</Project>
-      <Name>Ak.Wwise.Api.WAAPI</Name>
-    </ProjectReference>
-    <ProjectReference Include="AK.Wwise.Unity.MonoBehaviour.csproj">
-      <Project>{3185B4AB-CE5D-0855-5956-5A42F1641054}</Project>
-      <Name>AK.Wwise.Unity.MonoBehaviour</Name>
-    </ProjectReference>
-    <ProjectReference Include="AK.Wwise.Unity.Timeline.csproj">
-      <Project>{15727653-95EE-A89F-9DB9-B9ECF28909E7}</Project>
-      <Name>AK.Wwise.Unity.Timeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="AK.Wwise.Unity.API.Editor.csproj">
-      <Project>{5CBDD99D-6B8C-5307-4E1F-2091E974FF18}</Project>
-      <Name>AK.Wwise.Unity.API.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="AK.Wwise.Unity.API.csproj">
-      <Project>{BC03F222-9E9E-4D95-FA3B-DF39612B7E3A}</Project>
-      <Name>AK.Wwise.Unity.API</Name>
-    </ProjectReference>
-    <ProjectReference Include="AK.Wwise.Unity.Timeline.Editor.csproj">
-      <Project>{41EFFFF2-A373-0376-6BC3-9341520611C0}</Project>
-      <Name>AK.Wwise.Unity.Timeline.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Ink-Libraries.csproj">
       <Project>{81D56FAF-4D8C-F4FC-2615-EE0547BFB719}</Project>
       <Name>Ink-Libraries</Name>
@@ -712,14 +686,6 @@
     <ProjectReference Include="InkEditor.csproj">
       <Project>{A6FD374C-7728-3A41-D112-32DC9202FD5A}</Project>
       <Name>InkEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="AK.Wwise.Unity.API.WwiseTypes.csproj">
-      <Project>{2A778C04-1584-1A42-040C-108A2DFA160C}</Project>
-      <Name>AK.Wwise.Unity.API.WwiseTypes</Name>
-    </ProjectReference>
-    <ProjectReference Include="AK.Wwise.Unity.MonoBehaviour.Editor.csproj">
-      <Project>{17C4200E-594F-0160-3492-5F142C2BBE05}</Project>
-      <Name>AK.Wwise.Unity.MonoBehaviour.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

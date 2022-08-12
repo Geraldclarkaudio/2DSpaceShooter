@@ -32,6 +32,8 @@ public class SpawnManager : MonoBehaviour
 
     [SerializeField]
     private GameObject wonGameMusic;
+    [SerializeField]
+    private GameObject BGM;
     //public AK.Wwise.Event music;
     //public AK.Wwise.Event stinger;
 
@@ -216,7 +218,7 @@ public class SpawnManager : MonoBehaviour
         if(GameManager.Instance.gameWon == true)
         {
             //music.Stop(gameObject);
-
+            BGM.SetActive(false);
             wonGameMusic.SetActive(true);
         }
     }
