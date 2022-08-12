@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\jerry\Desktop\Unity Projects\2DSpaceShooter\Space_Shooter_Wwise_Project\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\jerry\Desktop\Unity Projects\2DSpaceShooter\Space_Shooter_Wwise_Project\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\jerry\Desktop\Unity Projects\2DSpaceShooter\Space_Shooter_Wwise_Project\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\geral\OneDrive\Desktop\Wwise_Projects\Space_Shooter_Wwise_Project\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\jerry\Desktop\Unity Projects\2DSpaceShooter\Space_Shooter_Wwise_Project\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="133642231" Language="SFX" Hash="3191823529">
+		<SoundBank Id="133642231" Language="SFX" Hash="2764276524">
 			<ObjectPath>\SoundBanks\General\General</ObjectPath>
 			<ShortName>General</ShortName>
 			<Path>General.bnk</Path>
@@ -61,6 +61,34 @@
 						<File Id="772774882" Language="SFX">
 							<ShortName>Cymbal Roll.wav</ShortName>
 							<Path>SFX\Cymbal Roll_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="740168818" Name="Play_Dialog" ObjectPath="\Events\SFX\Enemy\Play_Dialog" DurationType="OneShot" DurationMin="0.242677" DurationMax="0.531947">
+					<IncludedMemoryFiles>
+						<File Id="206171326" Language="SFX">
+							<ShortName>dialogSFX03.wav</ShortName>
+							<Path>SFX\dialogSFX03_10C4C929.wem</Path>
+						</File>
+						<File Id="468837629" Language="SFX">
+							<ShortName>dialogSFX01.wav</ShortName>
+							<Path>SFX\dialogSFX01_10C4C929.wem</Path>
+						</File>
+						<File Id="534052758" Language="SFX">
+							<ShortName>dialogSFX05.wav</ShortName>
+							<Path>SFX\dialogSFX05_10C4C929.wem</Path>
+						</File>
+						<File Id="843401233" Language="SFX">
+							<ShortName>dialogSFX02.wav</ShortName>
+							<Path>SFX\dialogSFX02_10C4C929.wem</Path>
+						</File>
+						<File Id="960530877" Language="SFX">
+							<ShortName>dialogSFX04.wav</ShortName>
+							<Path>SFX\dialogSFX04_10C4C929.wem</Path>
+						</File>
+						<File Id="1068474302" Language="SFX">
+							<ShortName>dialogSFX06.wav</ShortName>
+							<Path>SFX\dialogSFX06_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
