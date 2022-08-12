@@ -225,18 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3
   powerUpID: 3
-  powerUpCollectedSound:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 409b0cceb1915ff4aa9bc1d8bb2d6b10,
-      type: 2}
-  powerUpSwitch:
-    idInternal: 0
-    valueGuidInternal: 
-    groupIdInternal: 0
-    groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: cd9748982723dda4c90023dae6ecfc94,
-      type: 2}
+  powerUpCollected: {fileID: 8300000, guid: 66e13658e68f6c6479a47837df9f95d9, type: 3}
 --- !u!58 &8916709137004565746
 CircleCollider2D:
   m_ObjectHideFlags: 0

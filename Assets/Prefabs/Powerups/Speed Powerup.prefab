@@ -165,15 +165,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 6
   powerUpID: 1
-  powerUpCollectedSound:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 409b0cceb1915ff4aa9bc1d8bb2d6b10,
-      type: 2}
-  powerUpSwitch:
-    idInternal: 0
-    valueGuidInternal: 
-    groupIdInternal: 0
-    groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 7dd0bb121ae4604439b920bd600c99e9,
-      type: 2}
+  powerUpCollected: {fileID: 8300000, guid: 1bd94db4927413643986fd93db500002, type: 3}

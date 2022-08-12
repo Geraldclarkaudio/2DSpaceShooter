@@ -30,8 +30,11 @@ public class SpawnManager : MonoBehaviour
 
     public bool playerDied = false;
 
-    public AK.Wwise.Event music;
-    public AK.Wwise.Event stinger;
+    [SerializeField]
+    private GameObject wonGameMusic;
+    //public AK.Wwise.Event music;
+    //public AK.Wwise.Event stinger;
+
 
     private UIManager uiManager;
 
@@ -41,7 +44,7 @@ public class SpawnManager : MonoBehaviour
     private void Start()
     {
         uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
-        music.Post(gameObject);
+        //music.Post(gameObject);
         wave = 1;
     }
 
@@ -59,8 +62,8 @@ public class SpawnManager : MonoBehaviour
         {
             uiManager.UpdateWaveText("BOSS FIGHT");
         }
-        stinger.Post(gameObject);
-        AkSoundEngine.SetSwitch(switchGroupName[wave - 1], switchName[1], gameObject);
+        //stinger.Post(gameObject);
+        //AkSoundEngine.SetSwitch(switchGroupName[wave - 1], switchName[1], gameObject);
     }
 
     public void StopSpawning()
@@ -73,7 +76,7 @@ public class SpawnManager : MonoBehaviour
     {
         playerDied = true;
         Destroy(enemyContainer);
-        music.Stop(gameObject);
+        //music.Stop(gameObject);
     }
 
     IEnumerator PowerUpSpawner() //POWER UPS
@@ -212,7 +215,9 @@ public class SpawnManager : MonoBehaviour
     {
         if(GameManager.Instance.gameWon == true)
         {
-            music.Stop(gameObject);
+            //music.Stop(gameObject);
+
+            wonGameMusic.SetActive(true);
         }
     }
 }

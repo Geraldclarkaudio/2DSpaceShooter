@@ -18,7 +18,9 @@ public class Enemy : MonoBehaviour
     private float _fireRate = 3;
     private float _canFire = -1f;
 
-    public AK.Wwise.Event destroyed;
+    //public AK.Wwise.Event destroyed;
+    [SerializeField]
+    private AudioClip enemyExplodeClip;
 
     private SpawnManager spawnManager;
 
@@ -28,7 +30,7 @@ public class Enemy : MonoBehaviour
     private bool randomBool;
 
     private void Start()
-    {
+    {  
         _player = GameObject.Find("Player").GetComponent<Player>();
         if(_player == null)
         {
@@ -58,7 +60,9 @@ public class Enemy : MonoBehaviour
                 _anim.SetBool("Hit", true);
                 _player.ScoreKeeper(10);
                 col.enabled = false;
-                destroyed.Post(gameObject);
+                // destroyed.Post(gameObject);
+                AudioSource.PlayClipAtPoint(enemyExplodeClip, new Vector3(0,0,-15));
+
                 spawnManager.enemiesDestroyed++;
                 Destroy(this.gameObject, 2.5f);
             }
@@ -79,7 +83,8 @@ public class Enemy : MonoBehaviour
                 _anim.SetBool("Hit", true);
                 _player.ScoreKeeper(10);
                 col.enabled = false;
-                destroyed.Post(gameObject);
+                //destroyed.Post(gameObject);
+                AudioSource.PlayClipAtPoint(enemyExplodeClip, new Vector3(0, 0, -15));
                 spawnManager.enemiesDestroyed++;
                 Destroy(this.gameObject, 2.5f);
             }
@@ -89,7 +94,8 @@ public class Enemy : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _anim.SetBool("Hit", true);
-            destroyed.Post(gameObject);
+            //destroyed.Post(gameObject);
+            AudioSource.PlayClipAtPoint(enemyExplodeClip, new Vector3(0, 0, -15));
             camAnim.SetTrigger("Shake");
             spawnManager.enemiesDestroyed++;
             Destroy(this.gameObject, 2.5f); 

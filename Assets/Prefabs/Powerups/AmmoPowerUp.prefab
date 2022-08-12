@@ -130,18 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 4
   powerUpID: 4
-  powerUpCollectedSound:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 409b0cceb1915ff4aa9bc1d8bb2d6b10,
-      type: 2}
-  powerUpSwitch:
-    idInternal: 0
-    valueGuidInternal: 
-    groupIdInternal: 0
-    groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 007be1dc30b1793469c596bc70a1e88b,
-      type: 2}
+  powerUpCollected: {fileID: 8300000, guid: 983715243978c034b865702b94d01bd7, type: 3}
 --- !u!50 &4524742988229546208
 Rigidbody2D:
   serializedVersion: 4
