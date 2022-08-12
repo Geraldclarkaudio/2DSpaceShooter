@@ -28,6 +28,8 @@ public abstract class Dialog : MonoBehaviour
 
     private Player player;
 
+    public AK.Wwise.Event dialogEvent;
+
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -63,6 +65,7 @@ public abstract class Dialog : MonoBehaviour
         //if it can continue
         if (currentStory.canContinue)
         {
+            dialogEvent.Post(gameObject);
             dialogTextDisplay.text = currentStory.Continue();    
         }
         //if it cant
