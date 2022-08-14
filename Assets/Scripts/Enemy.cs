@@ -9,25 +9,24 @@ public class Enemy : MonoBehaviour
 
     private Player _player;
     private Animator _anim;
-    private BoxCollider2D col;
-    private Animator camAnim;
+    private BoxCollider2D _col;
+    private Animator _camAnim;
 
     [SerializeField]
-    private GameObject enemyLaser;
+    private GameObject _enemyLaser;
 
     private float _fireRate = 3;
     private float _canFire = -1f;
 
-    //public AK.Wwise.Event destroyed;
     [SerializeField]
-    private AudioClip enemyExplodeClip;
+    private AudioClip _enemyExplodeClip;
 
-    private SpawnManager spawnManager;
+    private SpawnManager _spawnManager;
 
     [SerializeField]
-    private GameObject shields;
+    private GameObject _shields;
 
-    private bool randomBool;
+    private bool _randomBool;
 
     private void Start()
     {  
@@ -36,12 +35,12 @@ public class Enemy : MonoBehaviour
         {
             Debug.LogError("Player is Null");
         }
-        spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
+        _spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
         _anim = GetComponent<Animator>();
-        col = GetComponent<BoxCollider2D>();
-        camAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
-        randomBool = Random.value > 0.5f;
-        shields.SetActive(randomBool);
+        _col = GetComponent<BoxCollider2D>();
+        _camAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
+        _randomBool = Random.value > 0.5f;
+        _shields.SetActive(_randomBool);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -50,20 +49,20 @@ public class Enemy : MonoBehaviour
         {  
             //sets 10 pointsd for killing this enemy. 
             //Make switch statement to call which enemy was killed. <3 
-            if(shields.activeSelf == true)
+            if(_shields.activeSelf == true)
             {
-                shields.SetActive(false);
+                _shields.SetActive(false);
                 return;
             }
-            else if (shields.activeSelf == false)
+            else if (_shields.activeSelf == false)
             {
                 _anim.SetBool("Hit", true);
                 _player.ScoreKeeper(10);
-                col.enabled = false;
+                _col.enabled = false;
                 // destroyed.Post(gameObject);
-                AudioSource.PlayClipAtPoint(enemyExplodeClip, new Vector3(0,0,-15));
+                AudioSource.PlayClipAtPoint(_enemyExplodeClip, new Vector3(0,0,-15));
 
-                spawnManager.enemiesDestroyed++;
+                _spawnManager._enemiesDestroyed++;
                 Destroy(this.gameObject, 2.5f);
             }
   
@@ -73,19 +72,19 @@ public class Enemy : MonoBehaviour
         {
             //sets 10 pointsd for killing this enemy. 
             //Make switch statement to call which enemy was killed. <3 
-            if (shields.activeSelf == true)
+            if (_shields.activeSelf == true)
             {
-                shields.SetActive(false);
+                _shields.SetActive(false);
                 return;
             }
-            else if (shields.activeSelf == false)
+            else if (_shields.activeSelf == false)
             {
                 _anim.SetBool("Hit", true);
                 _player.ScoreKeeper(10);
-                col.enabled = false;
+                _col.enabled = false;
                 //destroyed.Post(gameObject);
-                AudioSource.PlayClipAtPoint(enemyExplodeClip, new Vector3(0, 0, -15));
-                spawnManager.enemiesDestroyed++;
+                AudioSource.PlayClipAtPoint(_enemyExplodeClip, new Vector3(0, 0, -15));
+                _spawnManager._enemiesDestroyed++;
                 Destroy(this.gameObject, 2.5f);
             }
 
@@ -95,16 +94,16 @@ public class Enemy : MonoBehaviour
         {
             _anim.SetBool("Hit", true);
             //destroyed.Post(gameObject);
-            AudioSource.PlayClipAtPoint(enemyExplodeClip, new Vector3(0, 0, -15));
-            camAnim.SetTrigger("Shake");
-            spawnManager.enemiesDestroyed++;
+            AudioSource.PlayClipAtPoint(_enemyExplodeClip, new Vector3(0, 0, -15));
+            _camAnim.SetTrigger("Shake");
+            _spawnManager._enemiesDestroyed++;
             Destroy(this.gameObject, 2.5f); 
             _player.Damage();
         }
 
         if(other.CompareTag("ShieldPowerUp"))
         {
-            shields.SetActive(true);
+            _shields.SetActive(true);
             Destroy(other.gameObject);
         }
     }
@@ -116,8 +115,8 @@ public class Enemy : MonoBehaviour
         {
             _fireRate = Random.Range(3f, 7f);
             _canFire = Time.time + _fireRate;
-           GameObject enemyLaserGo = Instantiate(enemyLaser, transform.position, Quaternion.identity);
-            Laser[] lasers = enemyLaserGo.GetComponentsInChildren<Laser>();
+           GameObject _enemyLaserGo = Instantiate(_enemyLaser, transform.position, Quaternion.identity);
+            Laser[] lasers = _enemyLaserGo.GetComponentsInChildren<Laser>();
             //lasers[0].AssignEnemyLaser();
            // lasers[1].AssignEnemyLaser();
            //this also means:

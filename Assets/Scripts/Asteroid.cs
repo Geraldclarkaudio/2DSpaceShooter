@@ -5,22 +5,22 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour
 {
     [SerializeField]
-    private float rotateSpeed;
+    private float _rotateSpeed;
     [SerializeField]
-    private GameObject explosionPrefab;
+    private GameObject _explosionPrefab;
 
-    private Animator cam;
+    private Animator _cam;
 
     private void Start()
     {
-        cam = GameObject.Find("Main Camera").GetComponent<Animator>();
+        _cam = GameObject.Find("Main Camera").GetComponent<Animator>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Laser"))
         {
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            cam.SetTrigger("Shake");
+            Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+            _cam.SetTrigger("Shake");
             Destroy(this.gameObject);
 
         }
@@ -29,6 +29,6 @@ public class Asteroid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0, 0, rotateSpeed)*Time.deltaTime);
+        transform.Rotate(new Vector3(0, 0, _rotateSpeed)*Time.deltaTime);
     }
 }

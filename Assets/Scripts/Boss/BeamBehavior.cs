@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class BeamBehavior : MonoBehaviour
 {
-    private Player player;
+    private Player _player;
 
     private void Start()
     {
-        player = GameObject.Find("Player").GetComponent<Player>();
+        _player = GameObject.Find("Player").GetComponent<Player>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-            player.Damage();
+            _player.Damage();
     }
 }

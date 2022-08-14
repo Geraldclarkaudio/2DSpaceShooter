@@ -7,25 +7,22 @@ public class HomingMissle : MonoBehaviour
     [SerializeField]
     private float _speed;
 
-    private Transform target;
+    private Transform _target;
 
     [SerializeField]
-    private GameObject explosion;
+    private GameObject _explosion;
+    [SerializeField]
+    private LayerMask _enemyLayer;
+    [SerializeField]
+    private Rigidbody2D _rb;
+    [SerializeField]
+    private float _angleChangeSpeed;
 
-    public LayerMask enemyLayer;
-    public Rigidbody2D rb;
-    public float angleChangeSpeed;
-
-
-    private void Start()
-    {
-        
-    }
     void Update()
     {
-        if (target == null)
+        if (_target == null)
         {
-            Debug.Log("No target");
+            Debug.Log("No _target");
             transform.Translate(new Vector3(0, 1, 0) * _speed * Time.deltaTime);
 
             if(transform.position.y >= 16)
@@ -34,21 +31,21 @@ public class HomingMissle : MonoBehaviour
             }
         }
 
-        else if (target!= null) // somehow this code works. 
+        else if (_target!= null) // somehow this code works. 
         {
-            float distance = Vector3.Distance(transform.position, target.position);
-            Vector2 dir = (Vector2)target.position - rb.position;
+            float distance = Vector3.Distance(transform.position, _target.position);
+            Vector2 dir = (Vector2)_target.position - _rb.position;
             float rotAmount = Vector3.Cross(dir, transform.up).z;
 
 
-            rb.angularVelocity = -angleChangeSpeed * rotAmount;
-            rb.velocity = transform.up * _speed;
+            _rb.angularVelocity = -_angleChangeSpeed * rotAmount;
+            _rb.velocity = transform.up * _speed;
 
             if (distance <= 1)
             {
-                Instantiate(explosion, transform.position, Quaternion.identity);
+                Instantiate(_explosion, transform.position, Quaternion.identity);
                 Destroy(this.gameObject);
-              //  Destroy(explosion, 2.0f);
+              //  Destroy(_explosion, 2.0f);
             }
         }
     
@@ -59,15 +56,7 @@ public class HomingMissle : MonoBehaviour
         if(other.gameObject.layer == 11)
         {
             Debug.Log("Theres one!");
-            target = other.gameObject.transform;
+            _target = other.gameObject.transform;
         }
     }
-
-    // this needs to be changed so that the target is findable after instantiation with a collider. 
-    // if more than 1 object is in the collider make sure it only choses the closest one. 
-    // only enemies can be targetted with homing missle. 
-    //the only way an enemy that dodghes can be hit is with this missle.
-    // colliding with an enemy will instantiate the explosion for this which looks different than the one thats been happening.
-
-
 }

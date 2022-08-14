@@ -9,20 +9,14 @@ public class DroidEnemy : MonoBehaviour
     [SerializeField]
     private float _speed;
     [SerializeField]
-    private int rotSpeed;
+    private int _rotSpeed;
     [SerializeField]
-    private float rayLength;
-    Vector3 currentEulerAngles;
+    private GameObject _explodePrefab;
     [SerializeField]
-    private GameObject rayEndPos;
-    public GameObject explodePrefab;
-
-    public bool rotateNormal = true;
-
-    public bool atSentryPos = false;
+    private bool _atSentryPos = false;
     private SpriteRenderer _renderer;
 
-    private Animator anim;
+    private Animator _anim;
 
     private void Awake()
     {
@@ -32,7 +26,7 @@ public class DroidEnemy : MonoBehaviour
     {
         _renderer = GetComponent<SpriteRenderer>();
         
-        anim = GetComponent<Animator>();
+        _anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -40,16 +34,16 @@ public class DroidEnemy : MonoBehaviour
     {
         if (health <= 0)
         {
-            Instantiate(explodePrefab, transform.position, Quaternion.identity);
+            Instantiate(_explodePrefab, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
 
 
-        if (atSentryPos == true)
+        if (_atSentryPos == true)
         {
             return;
         }
-        else if(atSentryPos == false)
+        else if(_atSentryPos == false)
         {
             Move();
         }
@@ -69,8 +63,8 @@ public class DroidEnemy : MonoBehaviour
     {
         if(other.CompareTag("PatrolZone"))
         {
-            anim.SetBool("Rot", true);
-            atSentryPos = true;
+            _anim.SetBool("Rot", true);
+            _atSentryPos = true;
             StartCoroutine(Patrol());
         }
 
@@ -90,8 +84,8 @@ public class DroidEnemy : MonoBehaviour
     {
         if (other.CompareTag("PatrolZone"))
         {
-            anim.SetBool("Rot", false);
-            atSentryPos = false;
+            _anim.SetBool("Rot", false);
+            _atSentryPos = false;
         }
     }
 
@@ -99,7 +93,7 @@ public class DroidEnemy : MonoBehaviour
     {
         yield return new WaitForSeconds(12.0f);
 
-        atSentryPos = false;
+        _atSentryPos = false;
     }
 
     IEnumerator HitVisual()

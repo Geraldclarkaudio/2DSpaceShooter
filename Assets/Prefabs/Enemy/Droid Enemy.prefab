@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6d510c08818c843a35c00a26c042f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laser: {fileID: 1553424033}
+  _laser: {fileID: 1553424033}
 --- !u!1 &3284989080132209381
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,13 +289,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   _speed: 3
-  rotSpeed: 30
-  rayLength: 8
-  rayEndPos: {fileID: 1664185822242536573}
-  explodePrefab: {fileID: 6711726941510406854, guid: 8ae7e2c4b532d50438a812a71357a1e5,
+  _rotSpeed: 0
+  _explodePrefab: {fileID: 6711726941510406854, guid: 8ae7e2c4b532d50438a812a71357a1e5,
     type: 3}
-  rotateNormal: 1
-  atSentryPos: 0
+  _atSentryPos: 0
 --- !u!50 &662714649
 Rigidbody2D:
   serializedVersion: 4

@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class BulletDetect : MonoBehaviour
 {
-    private Animator dodgyEnemy;
+    private Animator _dodgyEnemy;
 
     private void Start()
     {
-        //dodgyEnemy = GameObject.Find("Dodgy Enemy").GetComponent<Animator>();
-        dodgyEnemy = GetComponentInParent<Animator>();
+        //_dodgyEnemy = GameObject.Find("Dodgy Enemy").GetComponent<Animator>();
+        _dodgyEnemy = GetComponentInParent<Animator>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Laser"))
         {
-            dodgyEnemy.SetTrigger("Dodge");
+            _dodgyEnemy.SetTrigger("Dodge");
         }
     }
 }

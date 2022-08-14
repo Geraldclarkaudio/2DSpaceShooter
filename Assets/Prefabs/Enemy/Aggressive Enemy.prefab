@@ -113,8 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
-  health: 5
-  expoldePrefab: {fileID: 6711726941510406854, guid: 8ae7e2c4b532d50438a812a71357a1e5,
+  _health: 0
+  _expoldePrefab: {fileID: 6711726941510406854, guid: 8ae7e2c4b532d50438a812a71357a1e5,
     type: 3}
 --- !u!50 &48935026348208663
 Rigidbody2D:

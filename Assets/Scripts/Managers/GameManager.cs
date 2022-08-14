@@ -18,13 +18,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private Player player;
+    private Player _player;
     public bool isGameOver;
     public bool gameWon;
 
     private void Start()
     {
-        player = GameObject.Find("Player").GetComponent<Player>();
+        _player = GameObject.Find("Player").GetComponent<Player>();
         StartCoroutine(WaitForControls());
     }
 
@@ -41,6 +41,6 @@ public class GameManager : MonoBehaviour
     private IEnumerator WaitForControls()
     {
         yield return new WaitForSeconds(1.0f);
-        player._input.PlayerControls.QuitButton.performed += QuitButton_performed;
+        _player._input.PlayerControls.QuitButton.performed += QuitButton_performed;
     }
 }

@@ -19,54 +19,56 @@ public class Player : MonoBehaviour
     //Laser Stuff
     [Header("Laser Stuff")]
     [SerializeField]
-    private GameObject laserPrefab;
+    private GameObject _laserPrefab;
     [SerializeField]
-    private GameObject tripleShotPrefab;
+    private GameObject _tripleShotPrefab;
     [SerializeField]
-    private GameObject spreadShotPrefab;
+    private GameObject _spreadShotPrefab;
     private float _canFire = -1f;
     [SerializeField]
-    private float fireRate = 0.1f;
-    private bool fired;
-    private bool homingFired;
+    private float _fireRate = 0.1f;
+    private bool _fired;
+    private bool _homingFired;
     [SerializeField]
-    private GameObject homingMissle;
+    private GameObject _homingMissle;
 
     [Header("Lives")]
     [SerializeField]
     public int _lives;
     [SerializeField]
-    private GameObject explosionPrefab;
+    private GameObject _explosionPrefab;
 
     [SerializeField]
-    private GameObject[] engines;
+    private GameObject[] _engines;
 
     [Header("PowerUps")]
     [SerializeField]
-    private GameObject shields;
+    private GameObject _shields;
     public bool isTripleShotEnabled = false;
     public bool isShieldActive = false;
     public bool isSpeedACtive = false;
     public bool spreadShotActive = false;
-    public GameObject Thruster;
-    public bool gravityPull = false;
     [SerializeField]
-    private GameObject gravityPullVisual;
+    private GameObject _thruster;
+    public bool _gravityPull = false;
     [SerializeField]
-    private int score;
+    private GameObject _gravityPullVisual;
     [SerializeField]
-    private int ammo;
+    private int _score;
     [SerializeField]
-    private int homingAmmo;
+    private int _ammo;
+    [SerializeField]
+    private int _homingAmmo;
 
     [SerializeField]
-    private Slider slider;
-    private bool thrusterActive = false;
+    private Slider slider; // TODO: put in UIManager
+    private bool _thrusterActive = false;
     [SerializeField]
-    private float thrusterUISpeed;
+    private float _thrusterUISpeed;
 
-    private Animator camAnim;
-    public float fuel;
+    private Animator _camAnim;
+    [SerializeField]
+    private float _fuel;
 
     [Header("DialogInput")]
     public bool dialogIsPlaying;
@@ -92,10 +94,10 @@ public class Player : MonoBehaviour
     void Start()
     {
         slider.value = 1;
-        ammo = 15;
-        homingAmmo = 5;
+        _ammo = 15;
+        _homingAmmo = 5;
         _lives = 3;
-        camAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
+        _camAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
         _spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
         _uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
 
@@ -114,15 +116,15 @@ public class Player : MonoBehaviour
     private void GravityPull_performed(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
         Debug.Log("hOLDING");
-        gravityPull = true;
-        gravityPullVisual.SetActive(true);
+        _gravityPull = true;
+        _gravityPullVisual.SetActive(true);
     }
 
     private void GravityPull_canceled(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
         Debug.Log("Let go");
-        gravityPull = false;
-        gravityPullVisual.SetActive(false);
+        _gravityPull = false;
+        _gravityPullVisual.SetActive(false);
     }
 
 
@@ -150,8 +152,8 @@ public class Player : MonoBehaviour
     {
         if(_spawnManager.playerDied == false)
         {
-            thrusterActive = false;
-            Thruster.SetActive(false);
+            _thrusterActive = false;
+            _thruster.SetActive(false);
 
             if (slider.value > 0)
             {
@@ -173,9 +175,9 @@ public class Player : MonoBehaviour
         {
             if (slider.value > 0)
             {
-                Thruster.SetActive(true);
+                _thruster.SetActive(true);
                 _speed *= _speedMultiplier;
-                thrusterActive = true;
+                _thrusterActive = true;
             }
 
             return;
@@ -205,9 +207,9 @@ public class Player : MonoBehaviour
     {
         if(context.performed)
         {
-            fired = true;
+            _fired = true;
 
-            if(fired ==true && Time.time > _canFire)
+            if(_fired ==true && Time.time > _canFire)
             {
                 Fire();
             }
@@ -218,9 +220,9 @@ public class Player : MonoBehaviour
     {
         if(context.performed)
         {
-            homingFired = true;
+            _homingFired = true;
 
-            if(homingFired == true && Time.time > _canFire)
+            if(_homingFired == true && Time.time > _canFire)
             {
                 FireHoming();
             }
@@ -238,15 +240,15 @@ public class Player : MonoBehaviour
             
         Movement();
 
-        if(thrusterActive == true)
+        if(_thrusterActive == true)
         {
             if(slider.value > 0)
             {
-                slider.value -= thrusterUISpeed * Time.deltaTime;
+                slider.value -= _thrusterUISpeed * Time.deltaTime;
             }
             else
             {
-                Thruster.SetActive(false);
+                _thruster.SetActive(false);
             }
         }
         else 
@@ -284,39 +286,39 @@ public class Player : MonoBehaviour
 
     private void Fire()
     {
-        if(ammo > 0)
+        if(_ammo > 0)
         {
-            _canFire = Time.time + fireRate;
+            _canFire = Time.time + _fireRate;
 
             if (isTripleShotEnabled == true)
             {
-                fired = false;
-                Instantiate(tripleShotPrefab, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity);
+                _fired = false;
+                Instantiate(_tripleShotPrefab, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity);
             }
             else if(spreadShotActive == true)
             {
-                fired = false;
-                Instantiate(spreadShotPrefab, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity);
+                _fired = false;
+                Instantiate(_spreadShotPrefab, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity);
             }
             else
             {
-                fired = false;
-                Instantiate(laserPrefab, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity);
-                ammo--;
-                _uiManager.UpdateAmmo(ammo);
+                _fired = false;
+                Instantiate(_laserPrefab, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity);
+                _ammo--;
+                _uiManager.UpdateAmmo(_ammo);
             }
         }
     }
 
     private void FireHoming()
     {
-        if(homingAmmo > 0)
+        if(_homingAmmo > 0)
         {
-            _canFire = Time.time + fireRate;
+            _canFire = Time.time + _fireRate;
 
-            homingFired = false;
-            Instantiate(homingMissle, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
-            homingAmmo--;
+            _homingFired = false;
+            Instantiate(_homingMissle, transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
+            _homingAmmo--;
 
         }
     }
@@ -330,22 +332,22 @@ public class Player : MonoBehaviour
 
         if(isShieldActive == true)
         {
-            //deactivateshields
+            //deactivate_shields
             isShieldActive = false;
-            shields.SetActive(false);
+            _shields.SetActive(false);
             return;
         }
 
         _lives--;
-        camAnim.SetTrigger("Shake");
+        _camAnim.SetTrigger("Shake");
         if (_lives == 2)
         {
-            engines[0].SetActive(true);
+            _engines[0].SetActive(true);
         }
 
         if(_lives == 1)
         {
-            engines[1].SetActive(true);
+            _engines[1].SetActive(true);
         }
 
         _uiManager.UpdateLives(_lives);
@@ -354,15 +356,15 @@ public class Player : MonoBehaviour
         {
             _spawnManager.PlayerDied();
             GameManager.Instance.isGameOver = true;
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }
 
     public void ScoreKeeper(int points)
     {
-        score += points;
-        _uiManager.UpdateScore(score);
+        _score += points;
+        _uiManager.UpdateScore(_score);
     }
 
     public void RestartGame()
@@ -397,8 +399,8 @@ public class Player : MonoBehaviour
 
     public void AmmoPowerUp()
     {
-        ammo = ammo + 5;
-        _uiManager.UpdateAmmo(ammo);
+        _ammo = _ammo + 5;
+        _uiManager.UpdateAmmo(_ammo);
     }
 
     private IEnumerator TripleShotCoolDown()
@@ -409,7 +411,7 @@ public class Player : MonoBehaviour
 
     public void SpeedActive()
     { 
-        slider.value += fuel;
+        slider.value += _fuel;
     }
 
     private IEnumerator SpeedCoolDown()
@@ -422,7 +424,7 @@ public class Player : MonoBehaviour
     public void ShieldActive()
     {
         isShieldActive = true;
-        shields.SetActive(true);
+        _shields.SetActive(true);
     }
 
     public void AddHealth()
@@ -436,14 +438,14 @@ public class Player : MonoBehaviour
         {
             _lives++;
             _uiManager.UpdateLives(_lives);
-            engines[0].SetActive(false);
+            _engines[0].SetActive(false);
         }
 
         if(_lives == 1)
         {
             _lives++;
             _uiManager.UpdateLives(_lives);
-            engines[1].SetActive(false);
+            _engines[1].SetActive(false);
         }
 
     }

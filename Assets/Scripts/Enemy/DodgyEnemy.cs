@@ -9,13 +9,13 @@ public class DodgyEnemy : MonoBehaviour
     private float _speed;
 
     [SerializeField]
-    private GameObject explodePrefab;
+    private GameObject _explodePrefab;
 
-    private Player player;
+    private Player _player;
 
     private void Start()
     {
-        player = GameObject.Find("Player").GetComponent<Player>();
+        _player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     void Update()
@@ -39,13 +39,13 @@ public class DodgyEnemy : MonoBehaviour
         if(other.CompareTag("Missle"))
         {
             Debug.Log("Hit");
-            Instantiate(explodePrefab, transform.position, Quaternion.identity);
+            Instantiate(_explodePrefab, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
 
         if(other.CompareTag("Player"))
         {
-            player.Damage();
+            _player.Damage();
         }
     }
 

@@ -129,8 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 4
-  powerUpID: 4
-  powerUpCollected: {fileID: 8300000, guid: 983715243978c034b865702b94d01bd7, type: 3}
+  _powerUpID: 4
+  _powerUpCollected: {fileID: 8300000, guid: 983715243978c034b865702b94d01bd7, type: 3}
 --- !u!50 &4524742988229546208
 Rigidbody2D:
   serializedVersion: 4

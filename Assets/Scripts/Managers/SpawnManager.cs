@@ -5,47 +5,41 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject powerUpContainer;
+    private GameObject _powerUpContainer;
     [SerializeField]
-    private GameObject enemyContainer;
+    private GameObject _enemyContainer;
 
     [SerializeField]
-    private GameObject[] powerups;
+    private GameObject[] _powerups;
     [SerializeField]
-    private int[] puWeights;
+    private int[] _puWeights;
 
 
     [SerializeField]
-    private GameObject[] enemies;
+    private GameObject[] _enemies;
     [SerializeField]
-    private int[] enemyWeights;
+    private int[] _enemyWeights;
 
     [SerializeField]
-    private GameObject bossEnemy1;
+    private GameObject _bossEnemy1;
 
     [SerializeField]
-    private int enemiesSpawned = 0;
-    public int enemiesDestroyed;
+    private int _enemiesSpawned = 0;
+    public int _enemiesDestroyed;
     public int wave;
 
     public bool playerDied = false;
 
     [SerializeField]
-    private GameObject wonGameMusic;
+    private GameObject _wonGameMusic;
     [SerializeField]
-    private GameObject BGM;
-    //public AK.Wwise.Event music;
-    //public AK.Wwise.Event stinger;
+    private GameObject _BGM;
 
-
-    private UIManager uiManager;
-
-    public string[] switchGroupName;
-    public string[] switchName;
+    private UIManager _uiManager;
 
     private void Start()
     {
-        uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
+        _uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
         //music.Post(gameObject);
         wave = 1;
     }
@@ -57,12 +51,12 @@ public class SpawnManager : MonoBehaviour
 
         if (wave <= 3)
         {
-            uiManager.UpdateWaveText("WAVE " + wave);
+            _uiManager.UpdateWaveText("WAVE " + wave);
         }
 
         else if (wave > 3)
         {
-            uiManager.UpdateWaveText("BOSS FIGHT");
+            _uiManager.UpdateWaveText("BOSS FIGHT");
         }
         //stinger.Post(gameObject);
         //AkSoundEngine.SetSwitch(switchGroupName[wave - 1], switchName[1], gameObject);
@@ -77,7 +71,7 @@ public class SpawnManager : MonoBehaviour
     public void PlayerDied()
     {
         playerDied = true;
-        Destroy(enemyContainer);
+        Destroy(_enemyContainer);
         //music.Stop(gameObject);
     }
 
@@ -88,8 +82,8 @@ public class SpawnManager : MonoBehaviour
         {
             Vector3 posToSPawn = new Vector3(Random.Range(-15f, 15f), 9, 0);
             //int randomPowerUp = Random.Range(0, 6);
-            GameObject newPowerUp = Instantiate(powerups[GetRandomPowerUp(puWeights)], posToSPawn, Quaternion.identity);
-            newPowerUp.transform.parent = powerUpContainer.transform;
+            GameObject newPowerUp = Instantiate(_powerups[GetRandomPowerUp(_puWeights)], posToSPawn, Quaternion.identity);
+            newPowerUp.transform.parent = _powerUpContainer.transform;
             yield return new WaitForSeconds(Random.Range(3f, 7f));
         }
     }
@@ -102,8 +96,8 @@ public class SpawnManager : MonoBehaviour
         while (playerDied == false)
         {
             Vector3 posToSpawn = new Vector3(Random.Range(-15f, 15f), 9, 0);
-            GameObject newEnemy = Instantiate(enemies[GetRandomEnemy(enemyWeights)], posToSpawn, Quaternion.identity);
-            newEnemy.transform.parent = enemyContainer.transform;
+            GameObject newEnemy = Instantiate(_enemies[GetRandomEnemy(_enemyWeights)], posToSpawn, Quaternion.identity);
+            newEnemy.transform.parent = _enemyContainer.transform;
             if (wave == 1)
             {
                 yield return new WaitForSeconds(Random.Range(1.5f, 2.5f));
@@ -117,21 +111,21 @@ public class SpawnManager : MonoBehaviour
                 yield return new WaitForSeconds(Random.Range(0.5f, 1.0f));
             }
 
-            enemiesSpawned++;
+            _enemiesSpawned++;
 
-            if (enemiesSpawned == 5 && wave == 1)
+            if (_enemiesSpawned == 5 && wave == 1)
             {
                 StartCoroutine(WaveChanger());
                 yield break;
             }
 
-            if (enemiesSpawned == 10 && wave == 2)
+            if (_enemiesSpawned == 10 && wave == 2)
             {
                 StartCoroutine(WaveChanger());
                 yield break;
             }
 
-            if (enemiesSpawned == 15 && wave == 3)
+            if (_enemiesSpawned == 15 && wave == 3)
             {
                 StartCoroutine(WaveChanger());
                 yield break;
@@ -152,14 +146,14 @@ public class SpawnManager : MonoBehaviour
     {
         StopAllCoroutines();
         StartCoroutine(PowerUpSpawner());
-        bossEnemy1.SetActive(true);
+        _bossEnemy1.SetActive(true);
     }
     IEnumerator WaveChanger()
     {
         StopSpawning();
         yield return new WaitForSeconds(5.0f);
         wave++;
-        enemiesSpawned = 0;
+        _enemiesSpawned = 0;
         StartSpawning();
     }
 
@@ -168,21 +162,21 @@ public class SpawnManager : MonoBehaviour
         int sumOfWeights = 0;
         int randNum;
 
-        for (int i = 0; i < powerups.Length; i++)
+        for (int i = 0; i < _powerups.Length; i++)
         {
             sumOfWeights += Weights[i];
         }
 
         randNum = Random.Range(0, sumOfWeights);
 
-        for (int i = 0; i < puWeights.Length; i++)
+        for (int i = 0; i < _puWeights.Length; i++)
         {
-            if (randNum < puWeights[i])
+            if (randNum < _puWeights[i])
             {
                 return i;
             }
 
-            randNum -= puWeights[i];
+            randNum -= _puWeights[i];
         }
 
         return -1;
@@ -193,21 +187,21 @@ public class SpawnManager : MonoBehaviour
         int sumOfWeights = 0;
         int randNum;
 
-        for (int i = 0; i < enemies.Length; i++)
+        for (int i = 0; i < _enemies.Length; i++)
         {
             sumOfWeights += Weights[i];
         }
 
         randNum = Random.Range(0, sumOfWeights);
 
-        for(int i = 0; i < enemyWeights.Length; i++)
+        for(int i = 0; i < _enemyWeights.Length; i++)
         {
-            if(randNum < enemyWeights[i])
+            if(randNum < _enemyWeights[i])
             {
                 return i;
             }
 
-            randNum -= enemyWeights[i];
+            randNum -= _enemyWeights[i];
         }
 
         return -1;
@@ -218,8 +212,8 @@ public class SpawnManager : MonoBehaviour
         if(GameManager.Instance.gameWon == true)
         {
             //music.Stop(gameObject);
-            BGM.SetActive(false);
-            wonGameMusic.SetActive(true);
+            _BGM.SetActive(false);
+            _wonGameMusic.SetActive(true);
         }
     }
 }

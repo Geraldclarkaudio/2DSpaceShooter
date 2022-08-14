@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
-  explodePrefab: {fileID: 6711726941510406854, guid: 8ae7e2c4b532d50438a812a71357a1e5,
+  _explodePrefab: {fileID: 6711726941510406854, guid: 8ae7e2c4b532d50438a812a71357a1e5,
     type: 3}
 --- !u!95 &5236877336989671097
 Animator:

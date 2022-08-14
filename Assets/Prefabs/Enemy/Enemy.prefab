@@ -49,10 +49,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
-  enemyLaser: {fileID: 1991304960981758306, guid: aa8af2dc34cfb2d43bfcc15f80100ee7,
+  _enemyLaser: {fileID: 1991304960981758306, guid: aa8af2dc34cfb2d43bfcc15f80100ee7,
     type: 3}
-  enemyExplodeClip: {fileID: 8300000, guid: c4277ce73d7c386449e35f7467337860, type: 3}
-  shields: {fileID: 4657444669966561896}
+  _enemyExplodeClip: {fileID: 8300000, guid: c4277ce73d7c386449e35f7467337860, type: 3}
+  _shields: {fileID: 4657444669966561896}
 --- !u!212 &6206483264453477519
 SpriteRenderer:
   m_ObjectHideFlags: 0

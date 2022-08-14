@@ -9,52 +9,55 @@ public class Boss1 : MonoBehaviour
     private float _speed;
 
     [SerializeField]
-    private Transform[] waypoints;
+    private Transform[] _waypoints;
 
     [SerializeField]
-    private Transform target;
+    private Transform _target;
+    [SerializeField]
+    private int i;
 
-    private BossDialog bossDialog;
+    [SerializeField]
+    private GameObject _laserPrefab;
+    [SerializeField]
+    private GameObject _beamPrefab;
 
-    public int i;
+    private Vector3 _leftFire;
+    private Vector3 _rightFire;
 
-    public GameObject laserPrefab;
-    public GameObject beamPrefab;
+    [SerializeField]
+    private int _health = 150;
+    [SerializeField]
+    private SpriteRenderer _renderer;
 
-    private Player player;
+    [SerializeField]
+    private Slider _slider;
 
-    private Vector3 leftFire;
-    private Vector3 rightFire;
+    [SerializeField]
+    private Transform[] _explosionLocations;
+    [SerializeField]
+    private GameObject _exlodePrefab;
+    [SerializeField]
+    private GameObject _bigExplosion;
+    [SerializeField]
+    private bool __isDead;
+    [SerializeField]
+    private GameObject _youWinPanel;
 
-    public int health = 150;
-    public SpriteRenderer _renderer;
-
-    public Slider slider;
-
-    public Transform[] explosionLocations;
-    public GameObject exlodePrefab;
-    public GameObject bigExplosion;
-
-    public bool isDead;
-
-    public GameObject youWinPanel;
-    private SpawnManager spawnManager;
-
-    public GameObject healthBar;
+    private SpawnManager _spawnManager;
+    [SerializeField]
+    private GameObject _healthBar;
 
     // Start is called before the first frame update
     void Start()
 
     {
-        spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
-        player = GameObject.Find("Player").GetComponent<Player>();
-        bossDialog = GetComponent<BossDialog>();
+        _spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
         _renderer = GetComponent<SpriteRenderer>();
         transform.position = new Vector3(0, 16, 0); //Spawn above screen bounds.
-        leftFire = new Vector3(-4, -4, 0);
-        rightFire = new Vector3(4, -4, 0);
-        isDead = false;
-        healthBar.SetActive(true);
+        _leftFire = new Vector3(-4, -4, 0);
+        _rightFire = new Vector3(4, -4, 0);
+        __isDead = false;
+        _healthBar.SetActive(true);
         StartCoroutine(WaitToFire());
     }
 
@@ -62,12 +65,12 @@ public class Boss1 : MonoBehaviour
     {
         if(other.CompareTag("Laser"))
         {
-            if(isDead == false)
+            if(__isDead == false)
             {
                 Damage();
             }
 
-            else if(isDead == true)
+            else if(__isDead == true)
             {
                 return;
             }
@@ -78,7 +81,7 @@ public class Boss1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(health >= 0.1f)
+        if(_health >= 0.1f)
         {
             Movement();
         }
@@ -86,24 +89,24 @@ public class Boss1 : MonoBehaviour
 
     public void Movement()
     {
-        target = waypoints[i];
-        float distance = Vector3.Distance(transform.position, target.position);
-        target.position = waypoints[i].position;
-        transform.position = Vector3.MoveTowards(transform.position, target.position, _speed * Time.deltaTime);
+        _target = _waypoints[i];
+        float distance = Vector3.Distance(transform.position, _target.position);
+        _target.position = _waypoints[i].position;
+        transform.position = Vector3.MoveTowards(transform.position, _target.position, _speed * Time.deltaTime);
 
         if (distance <= 0.5f)
         {
-            if (target.position == waypoints[0].position)
+            if (_target.position == _waypoints[0].position)
             {
                 i++;
             }
 
-            if (target.position == waypoints[2].position)
+            if (_target.position == _waypoints[2].position)
             {
                 i--;
             }
 
-            if (target.position == waypoints[1].position)
+            if (_target.position == _waypoints[1].position)
             {
                 i++;
             }
@@ -122,7 +125,7 @@ public class Boss1 : MonoBehaviour
         while(GameManager.Instance.isGameOver == false)
         {
             yield return new WaitForSeconds(Random.Range(2.5f, 5));
-            Instantiate(laserPrefab, transform.position + leftFire, Quaternion.identity);
+            Instantiate(_laserPrefab, transform.position + _leftFire, Quaternion.identity);
         }
     }
 
@@ -131,7 +134,7 @@ public class Boss1 : MonoBehaviour
         while (GameManager.Instance.isGameOver == false)
         {
             yield return new WaitForSeconds(Random.Range(3, 5));
-            Instantiate(laserPrefab, transform.position + rightFire, Quaternion.identity);
+            Instantiate(_laserPrefab, transform.position + _rightFire, Quaternion.identity);
         }
     }
     IEnumerator FireBeamRoutine()
@@ -139,9 +142,9 @@ public class Boss1 : MonoBehaviour
         while (GameManager.Instance.isGameOver == false)
         {
             yield return new WaitForSeconds(Random.Range(10,15));
-            beamPrefab.SetActive(true);
+            _beamPrefab.SetActive(true);
             yield return new WaitForSeconds(5f);
-            beamPrefab.SetActive(false);        
+            _beamPrefab.SetActive(false);        
         }
     }
 
@@ -153,14 +156,14 @@ public class Boss1 : MonoBehaviour
 
     public void Damage()
     {
-        health--;
-        slider.value = slider.value - 0.006666667f;
+        _health--;
+        _slider.value = _slider.value - 0.006666667f;
         StartCoroutine(colorFlashHit());
 
-        if (health <= 0)
+        if (_health <= 0)
         {
-            isDead = true;
-                slider.value = 0;
+            __isDead = true;
+                _slider.value = 0;
                 Destroy(this.gameObject, 10f);
                 StartCoroutine(ExplodeRoutine());
             StartCoroutine(BigExplosion());
@@ -178,27 +181,27 @@ public class Boss1 : MonoBehaviour
     IEnumerator ExplodeRoutine()
     {
         yield return new WaitForSeconds(1.5f);
-        Instantiate(exlodePrefab, explosionLocations[0].position, Quaternion.identity);
+        Instantiate(_exlodePrefab, _explosionLocations[0].position, Quaternion.identity);
         yield return new WaitForSeconds(1.5f);
-        Instantiate(exlodePrefab, explosionLocations[1].position, Quaternion.identity);
+        Instantiate(_exlodePrefab, _explosionLocations[1].position, Quaternion.identity);
         yield return new WaitForSeconds(1.5f);
-        Instantiate(exlodePrefab, explosionLocations[2].position, Quaternion.identity);
+        Instantiate(_exlodePrefab, _explosionLocations[2].position, Quaternion.identity);
         yield return new WaitForSeconds(1.5f);
-        Instantiate(exlodePrefab, explosionLocations[3].position, Quaternion.identity);
+        Instantiate(_exlodePrefab, _explosionLocations[3].position, Quaternion.identity);
         yield return new WaitForSeconds(1.5f);
-        Instantiate(exlodePrefab, explosionLocations[0].position, Quaternion.identity);
+        Instantiate(_exlodePrefab, _explosionLocations[0].position, Quaternion.identity);
         yield return new WaitForSeconds(1.5f);
-        Instantiate(exlodePrefab, explosionLocations[1].position, Quaternion.identity);
+        Instantiate(_exlodePrefab, _explosionLocations[1].position, Quaternion.identity);
     }
 
     IEnumerator BigExplosion()
     {
-        spawnManager.StopSpawning();
+        _spawnManager.StopSpawning();
         yield return new WaitForSeconds(9f);
 
-        Instantiate(bigExplosion, transform.position, Quaternion.identity);
-        youWinPanel.SetActive(true);
-        healthBar.SetActive(false);
+        Instantiate(_bigExplosion, transform.position, Quaternion.identity);
+        _youWinPanel.SetActive(true);
+        _healthBar.SetActive(false);
         GameManager.Instance.gameWon = true;
     }
 }

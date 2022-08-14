@@ -7,28 +7,18 @@ public class PowerUp : MonoBehaviour
     [SerializeField]
     private float _speed;
 
-    private Player player;
-
-    //PowerUpIDs
-    //0 = triple
-    //1 = Speed
-    //2 = Shield
-    [SerializeField]
-    private int powerUpID; 
-
-    //[SerializeField]
-    //private AK.Wwise.Event powerUpCollectedSound;
-    //[SerializeField]
-    //private AK.Wwise.Switch powerUpSwitch;
+    private Player _player;
 
     [SerializeField]
-    private AudioClip powerUpCollected;
+    private int _powerUpID; 
 
-    // Start is called before the first frame update
+    [SerializeField]
+    private AudioClip _powerUpCollected;
+
     void Start()
     {        
-        player = GameObject.Find("Player").GetComponent<Player>();
-        if(player == null)
+        _player = GameObject.Find("Player").GetComponent<Player>();
+        if(_player == null)
         {
             Debug.LogError("Player is Null");
         }
@@ -39,52 +29,52 @@ public class PowerUp : MonoBehaviour
         if(other.CompareTag("Player"))
         {
            
-            switch(powerUpID)
+            switch(_powerUpID)
             {
                 case 0:
-                    player.TripleShotActive();
+                    _player.TripleShotActive();
                     //powerUpSwitch.SetValue(gameObject);
-                    //powerUpCollectedSound.Post(gameObject);
-                    AudioSource.PlayClipAtPoint(powerUpCollected, new Vector3(0, 0, -15));
+                    //_powerUpCollectedSound.Post(gameObject);
+                    AudioSource.PlayClipAtPoint(_powerUpCollected, new Vector3(0, 0, -15));
                     break;
                 case 1:
                     //powerUpSwitch.SetValue(gameObject);
-                    //powerUpCollectedSound.Post(gameObject);
-                    AudioSource.PlayClipAtPoint(powerUpCollected, new Vector3(0, 0, -15));
+                    //_powerUpCollectedSound.Post(gameObject);
+                    AudioSource.PlayClipAtPoint(_powerUpCollected, new Vector3(0, 0, -15));
 
-                    player.SpeedActive();
+                    _player.SpeedActive();
 
                     break;
                 case 2:
-                    player.ShieldActive();
+                    _player.ShieldActive();
                     //powerUpSwitch.SetValue(gameObject);
-                    //powerUpCollectedSound.Post(gameObject);
-                    AudioSource.PlayClipAtPoint(powerUpCollected, new Vector3(0, 0, -15));
+                    //_powerUpCollectedSound.Post(gameObject);
+                    AudioSource.PlayClipAtPoint(_powerUpCollected, new Vector3(0, 0, -15));
 
                     break;
                 case 3:
-                    player.AddHealth();
+                    _player.AddHealth();
                     //powerUpSwitch.SetValue(gameObject);
-                    //powerUpCollectedSound.Post(gameObject);
-                    AudioSource.PlayClipAtPoint(powerUpCollected, new Vector3(0, 0, -15));
+                    //_powerUpCollectedSound.Post(gameObject);
+                    AudioSource.PlayClipAtPoint(_powerUpCollected, new Vector3(0, 0, -15));
 
                     break;
                 case 4:
-                    player.AmmoPowerUp();
+                    _player.AmmoPowerUp();
                     //powerUpSwitch.SetValue(gameObject);
-                    //powerUpCollectedSound.Post(gameObject);
-                    AudioSource.PlayClipAtPoint(powerUpCollected, new Vector3(0, 0, -15));
+                    //_powerUpCollectedSound.Post(gameObject);
+                    AudioSource.PlayClipAtPoint(_powerUpCollected, new Vector3(0, 0, -15));
 
                     break;
                 case 5:
-                    player.SpreadShotActive();
+                    _player.SpreadShotActive();
                     //powerUpSwitch.SetValue(gameObject);
-                    //powerUpCollectedSound.Post(gameObject);
-                    AudioSource.PlayClipAtPoint(powerUpCollected, new Vector3(0, 0, -15));
+                    //_powerUpCollectedSound.Post(gameObject);
+                    AudioSource.PlayClipAtPoint(_powerUpCollected, new Vector3(0, 0, -15));
 
                     break;
                 case 6:
-                    player.Damage();
+                    _player.Damage();
                     break;
 
             }
@@ -96,11 +86,11 @@ public class PowerUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.gravityPull == true)
+        if(_player._gravityPull == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, _speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _speed * Time.deltaTime);
         }
-        else if(player.gravityPull == false)
+        else if(_player._gravityPull == false)
         {
             transform.Translate(Vector3.down * _speed * Time.deltaTime);
         }

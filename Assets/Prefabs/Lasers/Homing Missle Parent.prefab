@@ -47,13 +47,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 8
-  explosion: {fileID: 8317290769584778373, guid: e093d6318ca4b264fb4d2d75f651db5b,
+  _explosion: {fileID: 8317290769584778373, guid: e093d6318ca4b264fb4d2d75f651db5b,
     type: 3}
-  enemyLayer:
+  _enemyLayer:
     serializedVersion: 2
     m_Bits: 2048
-  rb: {fileID: 546626197}
-  angleChangeSpeed: 300
+  _rb: {fileID: 546626197}
+  _angleChangeSpeed: 200
 --- !u!50 &546626197
 Rigidbody2D:
   serializedVersion: 4

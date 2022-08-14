@@ -5,16 +5,16 @@ using UnityEngine;
 public class IntroAsteroid : MonoBehaviour
 {
     [SerializeField]
-    private float rotateSpeed;
+    private float _rotateSpeed;
     [SerializeField]
-    private GameObject explosionPrefab;
+    private GameObject _explosionPrefab;
 
     private SpawnManager _spawnManager;
-    private Animator camAnim;
+    private Animator _camAnim;
 
     private void Start()
     {
-        camAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
+        _camAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
         _spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
     }
 
@@ -23,8 +23,8 @@ public class IntroAsteroid : MonoBehaviour
     {
         if (other.CompareTag("Laser"))
         {
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-            camAnim.SetTrigger("Shake");
+            Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+            _camAnim.SetTrigger("Shake");
             _spawnManager.StartSpawning();
             Destroy(this.gameObject);
 
@@ -34,6 +34,6 @@ public class IntroAsteroid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0, 0, rotateSpeed) * Time.deltaTime);
+        transform.Rotate(new Vector3(0, 0, _rotateSpeed) * Time.deltaTime);
     }
 }

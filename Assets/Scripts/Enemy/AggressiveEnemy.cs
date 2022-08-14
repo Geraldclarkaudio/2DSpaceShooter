@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class AggressiveEnemy : MonoBehaviour
 {
-    private Player player;
+    private Player _player;
 
     [SerializeField]
     private float _speed;
 
     [SerializeField]
-    private int health;
-    private bool hitPlayer = false;
+    private int _health;
+    private bool _hitPlayer = false;
 
     [SerializeField]
-    private GameObject expoldePrefab;
+    private GameObject _expoldePrefab;
 
     private SpriteRenderer _renderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        health = 5;
-        player = GameObject.Find("Player").GetComponent<Player>();
+        _health = 5;
+        _player = GameObject.Find("Player").GetComponent<Player>();
         _renderer = GetComponent<SpriteRenderer>();
     }
 
@@ -30,13 +30,13 @@ public class AggressiveEnemy : MonoBehaviour
     {
        if(other.CompareTag("Player"))
         {
-            if(hitPlayer == false)
+            if(_hitPlayer == false)
             {
-                hitPlayer = true;
-                player.Damage();
-                health--;
+                _hitPlayer = true;
+                _player.Damage();
+                _health--;
             }
-            else if(hitPlayer == true)
+            else if(_hitPlayer == true)
             {
                 return;
             }
@@ -44,13 +44,13 @@ public class AggressiveEnemy : MonoBehaviour
 
        if(other.CompareTag("Laser"))
         {
-            health--;
+            _health--;
             StartCoroutine(HitVisual());
         }
 
        if(other.CompareTag("Missle"))
         {
-            health = 0;
+            _health = 0;
         }
     }
 
@@ -58,7 +58,7 @@ public class AggressiveEnemy : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            hitPlayer = false;
+            _hitPlayer = false;
         }
     }
 
@@ -71,13 +71,13 @@ public class AggressiveEnemy : MonoBehaviour
         }
         else if(transform.position.y >= -3f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, _speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _speed * Time.deltaTime);
         }
 
-        if (health <= 0)
+        if (_health <= 0)
         {
-            player.ScoreKeeper(50);
-            Instantiate(expoldePrefab, transform.position, Quaternion.identity);
+            _player.ScoreKeeper(50);
+            Instantiate(_expoldePrefab, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }

@@ -224,8 +224,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
-  powerUpID: 3
-  powerUpCollected: {fileID: 8300000, guid: 66e13658e68f6c6479a47837df9f95d9, type: 3}
+  _powerUpID: 3
+  _powerUpCollected: {fileID: 8300000, guid: 66e13658e68f6c6479a47837df9f95d9, type: 3}
 --- !u!58 &8916709137004565746
 CircleCollider2D:
   m_ObjectHideFlags: 0

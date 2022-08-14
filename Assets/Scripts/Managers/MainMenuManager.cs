@@ -6,23 +6,24 @@ using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
-    public GameObject controls;
+    [SerializeField]
+    private GameObject _controls;
 
     [SerializeField]
-    private Image newGameButtonImage;
+    private Image _newGameButtonImage;
     [SerializeField]
     private Image controlButtonImage;
 
     [SerializeField]
-    private Sprite[] sprites;
+    private Sprite[] _sprites;
 
-    private AudioSource audioSource;
+    private AudioSource _audioSource;
     [SerializeField]
-    private AudioClip buttonHoverClip;
+    private AudioClip _buttonHoverClip;
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public void NewGame()
@@ -32,37 +33,37 @@ public class MainMenuManager : MonoBehaviour
 
     public void Controls()
     {
-        controls.SetActive(true);
+        _controls.SetActive(true);
     }
     public void BackButton()
     {
-        controls.SetActive(false);
+        _controls.SetActive(false);
     }
 
     public void ButtonHover()
     {
-        newGameButtonImage.sprite = sprites[1];
+        _newGameButtonImage.sprite = _sprites[1];
     }
 
     public void ButtonHoverExit()
     {
-        newGameButtonImage.sprite = sprites[0];
+        _newGameButtonImage.sprite = _sprites[0];
     }
 
     public void ButtonHover2()
     {
-        controlButtonImage.sprite = sprites[2];
+        controlButtonImage.sprite = _sprites[2];
     }
 
     public void ButtonHoverExit2()
     {
-        controlButtonImage.sprite = sprites[3];
+        controlButtonImage.sprite = _sprites[3];
     }
 
     public void ButtonHoverSFX()
     {
-        audioSource.pitch = Random.Range(0.85f, 1.0f);
-        audioSource.clip = buttonHoverClip;
-        audioSource.Play();
+        _audioSource.pitch = Random.Range(0.85f, 1.0f);
+        _audioSource.clip = _buttonHoverClip;
+        _audioSource.Play();
     }
 }

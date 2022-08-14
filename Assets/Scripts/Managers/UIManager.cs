@@ -7,75 +7,75 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    private TMP_Text scoreText;
+    private TMP_Text _scoreText;
     [SerializeField]
-    private TMP_Text ammoText;
+    private TMP_Text _ammoText;
     [SerializeField]
-    private Sprite[] livesSprites;
+    private Sprite[] _livesSprites;
     [SerializeField]
-    private Image liveImage;
+    private Image _liveImage;
 
     [SerializeField]
-    private GameObject gameOverText;
+    private GameObject _gameOverText;
     [SerializeField]
-    private GameObject restartText;
+    private GameObject _restartText;
     [SerializeField]
-    private TMP_Text waveText;
+    private TMP_Text _waveText;
     [SerializeField]
-    private GameObject waveTextPanel;
+    private GameObject _waveTextPanel;
    
 
     private Player player; 
     // Start is called before the first frame update
     void Start()
     {
-        liveImage.material.color = Color.white;
-        scoreText.text = "Score: " + 0;
-        ammoText.text = "15/15";
-        gameOverText.SetActive(false);
-        restartText.SetActive(false);
+        _liveImage.material.color = Color.white;
+        _scoreText.text = "Score: " + 0;
+        _ammoText.text = "15/15";
+        _gameOverText.SetActive(false);
+        _restartText.SetActive(false);
         player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     public void UpdateScore(int playerScore)
     {
-        scoreText.text = "Score: " + playerScore.ToString();
+        _scoreText.text = "Score: " + playerScore.ToString();
     }
     public void UpdateAmmo(int ammoAmount)
     {
-        ammoText.text = ammoAmount.ToString() + "/15";
+        _ammoText.text = ammoAmount.ToString() + "/15";
     }
 
     public void UpdateLives(int currentLives)
     {
-        liveImage.sprite = livesSprites[currentLives];
+        _liveImage.sprite = _livesSprites[currentLives];
         if(currentLives == 0)
         {
-            liveImage.material.color = Color.red;
+            _liveImage.material.color = Color.red;
             StartCoroutine(TextFlicker());
-            restartText.SetActive(true);
+            _restartText.SetActive(true);
         }
     }
 
     public void UpdateWaveText(string text)
     {
-        waveText.text = text;
+        _waveText.text = text;
         StartCoroutine(WAVETextFlicker());
     }
 
     private IEnumerator WAVETextFlicker()
     {
-        waveTextPanel.SetActive(true);
+        _waveTextPanel.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-        waveTextPanel.SetActive(false);
+        _waveTextPanel.SetActive(false);
         yield return new WaitForSeconds(0.5f);
-        waveTextPanel.SetActive(true);
+        _waveTextPanel.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-        waveTextPanel.SetActive(false);
+        _waveTextPanel.SetActive(false);
         yield return new WaitForSeconds(0.5f);
-        waveTextPanel.SetActive(true);
+        _waveTextPanel.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-        waveTextPanel.SetActive(false);
+        _waveTextPanel.SetActive(false);
         yield return new WaitForSeconds(0.5f);
     }
 
@@ -83,9 +83,9 @@ public class UIManager : MonoBehaviour
     {
         while(player._lives == 0)
         {
-            gameOverText.SetActive(true);
+            _gameOverText.SetActive(true);
             yield return new WaitForSeconds(0.5f);
-            gameOverText.SetActive(false);
+            _gameOverText.SetActive(false);
             yield return new WaitForSeconds(0.5f);
         }
 

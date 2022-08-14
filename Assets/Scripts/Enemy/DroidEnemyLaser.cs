@@ -5,7 +5,7 @@ using UnityEngine;
 public class DroidEnemyLaser : MonoBehaviour
 {
     [SerializeField]
-    private GameObject laser;
+    private GameObject _laser;
 
 
     private void Start()
@@ -22,15 +22,15 @@ public class DroidEnemyLaser : MonoBehaviour
         }
         if(other.CompareTag("PowerUp"))
         {
-            StartCoroutine(laserActive());
+            StartCoroutine(_laserActive());
             Destroy(other.gameObject, 0.5f);
         }
     }
 
-    IEnumerator laserActive()
+    IEnumerator _laserActive()
     {
-        laser.SetActive(true);
+        _laser.SetActive(true);
         yield return new WaitForSeconds(1.0f);
-        laser.SetActive(false);
+        _laser.SetActive(false);
     }
 }

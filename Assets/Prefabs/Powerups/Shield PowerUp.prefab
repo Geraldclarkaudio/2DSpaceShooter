@@ -164,5 +164,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 4
-  powerUpID: 2
-  powerUpCollected: {fileID: 8300000, guid: 3dd2f8056ae35394faf611c3cf68fb07, type: 3}
+  _powerUpID: 2
+  _powerUpCollected: {fileID: 8300000, guid: 3dd2f8056ae35394faf611c3cf68fb07, type: 3}

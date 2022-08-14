@@ -9,38 +9,30 @@ public class Laser : MonoBehaviour
 
     public bool isEnemyLaser = false;
 
-    private Player player;
+    private Player _player;
 
-    //[SerializeField]
-    //private AK.Wwise.Event playerLaser;
-
-    //[SerializeField]
-    //private AK.Wwise.Event enemyLaser;
-
-    private AudioSource audioSource;
+    private AudioSource _audioSource;
     [SerializeField]
-    private AudioClip playerLaser;
+    private AudioClip _playerLaser;
     [SerializeField]
-    private AudioClip enemyLaser;
+    private AudioClip _enemyLaser;
 
    
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        player = GameObject.Find("Player").GetComponent<Player>();
+        _audioSource = GetComponent<AudioSource>();
+        _player = GameObject.Find("Player").GetComponent<Player>();
                 
         if (isEnemyLaser == false)
         {
-            //playerLaser.Post(gameObject);
-            audioSource.clip = playerLaser;
-            audioSource.Play();
+            _audioSource.clip = _playerLaser;
+            _audioSource.Play();
         }
         else if(isEnemyLaser == true)
         {
-            //enemyLaser.Post(gameObject);
-            audioSource.clip = enemyLaser;
-            audioSource.Play();
+            _audioSource.clip = _enemyLaser;
+            _audioSource.Play();
         }
         
     }
@@ -59,7 +51,7 @@ public class Laser : MonoBehaviour
 
         if(other.CompareTag("Player") && isEnemyLaser == true)
         {
-            player.Damage();
+            _player.Damage();
         }
 
         if(other.CompareTag("Enemy") && isEnemyLaser == true)
