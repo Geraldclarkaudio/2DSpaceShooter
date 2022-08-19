@@ -235,6 +235,11 @@ public class Player : MonoBehaviour
         {
             return;
         }
+
+        if(_ammo > 50)
+        {
+            _ammo = 50;
+        }
             
         Movement();
 
@@ -397,8 +402,15 @@ public class Player : MonoBehaviour
 
     public void AmmoPowerUp()
     {
-        _ammo = _ammo + 5;
-        _uiManager.UpdateAmmo(_ammo);
+        if(_ammo == 50)
+        {
+            return;
+        }
+        else if(_ammo < 50)
+        {
+            _ammo = _ammo + 5;
+            _uiManager.UpdateAmmo(_ammo);
+        }
     }
 
     private IEnumerator TripleShotCoolDown()

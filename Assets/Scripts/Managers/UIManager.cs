@@ -47,6 +47,10 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateAmmo(int ammoAmount)
     {
+        if(ammoAmount >= 50)
+        {
+            ammoAmount = 50;
+        }
         _ammoText.text = ammoAmount.ToString() + "/50";
     }
 
