@@ -17,6 +17,7 @@ public class AggressiveEnemy : MonoBehaviour
     private GameObject _expoldePrefab;
 
     private SpriteRenderer _renderer;
+    private SpawnManager _spawnManager;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class AggressiveEnemy : MonoBehaviour
         _health = 5;
         _player = GameObject.Find("Player").GetComponent<Player>();
         _renderer = GetComponent<SpriteRenderer>();
+        _spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -78,6 +80,7 @@ public class AggressiveEnemy : MonoBehaviour
         {
             _player.ScoreKeeper(50);
             Instantiate(_expoldePrefab, transform.position, Quaternion.identity);
+            _spawnManager._enemiesDestroyed++;
             Destroy(this.gameObject);
         }
     }

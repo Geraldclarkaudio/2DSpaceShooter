@@ -92,8 +92,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        _ammo = 15;
-        _homingAmmo = 5;
+        _ammo = 50;
+        _homingAmmo = 20;
         _lives = 3;
         _camAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
         _spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();

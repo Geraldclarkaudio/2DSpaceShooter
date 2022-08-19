@@ -18,6 +18,8 @@ public class DroidEnemy : MonoBehaviour
 
     private Animator _anim;
 
+    private SpawnManager _spawnManager;
+
     private void Awake()
     {
         health = 3;
@@ -25,7 +27,7 @@ public class DroidEnemy : MonoBehaviour
     private void Start()
     {
         _renderer = GetComponent<SpriteRenderer>();
-        
+        _spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
         _anim = GetComponent<Animator>();
     }
 
@@ -35,6 +37,7 @@ public class DroidEnemy : MonoBehaviour
         if (health <= 0)
         {
             Instantiate(_explodePrefab, transform.position, Quaternion.identity);
+            _spawnManager._enemiesDestroyed++;
             Destroy(this.gameObject);
         }
 

@@ -13,9 +13,12 @@ public class DodgyEnemy : MonoBehaviour
 
     private Player _player;
 
+    private SpawnManager _spawnManager;
+
     private void Start()
     {
         _player = GameObject.Find("Player").GetComponent<Player>();
+        _spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
     }
 
     void Update()
@@ -40,6 +43,7 @@ public class DodgyEnemy : MonoBehaviour
         {
             Debug.Log("Hit");
             Instantiate(_explodePrefab, transform.position, Quaternion.identity);
+            _spawnManager._enemiesDestroyed++;
             Destroy(this.gameObject);
         }
 

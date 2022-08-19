@@ -49,8 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 15
   isEnemyLaser: 0
-  playerLaser: {fileID: 8300000, guid: 02e6e7140b8177f49a5697ac5678c8c3, type: 3}
-  enemyLaser: {fileID: 8300000, guid: e8ca7ce8f4f910445aa5db2e32f964fb, type: 3}
+  _playerLaser: {fileID: 8300000, guid: 02e6e7140b8177f49a5697ac5678c8c3, type: 3}
+  _enemyLaser: {fileID: 8300000, guid: e8ca7ce8f4f910445aa5db2e32f964fb, type: 3}
 --- !u!212 &-3107605019797610991
 SpriteRenderer:
   m_ObjectHideFlags: 0

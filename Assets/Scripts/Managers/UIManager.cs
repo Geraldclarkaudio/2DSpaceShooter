@@ -34,7 +34,7 @@ public class UIManager : MonoBehaviour
     {
         _liveImage.material.color = Color.white;
         _scoreText.text = "Score: " + 0;
-        _ammoText.text = "15/15";
+        _ammoText.text = "50/50";
         _gameOverText.SetActive(false);
         _restartText.SetActive(false);
         player = GameObject.Find("Player").GetComponent<Player>();
@@ -47,7 +47,7 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateAmmo(int ammoAmount)
     {
-        _ammoText.text = ammoAmount.ToString() + "/15";
+        _ammoText.text = ammoAmount.ToString() + "/50";
     }
 
     public void UpdateLives(int currentLives)

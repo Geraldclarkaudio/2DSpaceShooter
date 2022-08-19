@@ -48,21 +48,21 @@ public class SpawnManager : MonoBehaviour
         StartCoroutine(SpawnEnemies());
         StartCoroutine(PowerUpSpawner());
 
-        //if (wave <= 3)
-        //{
-        //    _uiManager.UpdateWaveText("WAVE " + wave);
-        //}
+        if (wave <= 3)
+        {
+            _uiManager.UpdateWaveText("WAVE " + wave);
+        }
 
-        //else if (wave > 3)
-        //{
-        //    _uiManager.UpdateWaveText("BOSS FIGHT");
-        //}
-        //stinger.Post(gameObject);
-        //AkSoundEngine.SetSwitch(switchGroupName[wave - 1], switchName[1], gameObject);
+        else if (wave > 3)
+        {
+            _uiManager.UpdateWaveText("BOSS FIGHT");
+        }
+
     }
 
     public void StopSpawning()
     {
+        Debug.Log("StopSpawning");
         StopCoroutine(SpawnEnemies());
         StopCoroutine(PowerUpSpawner());
     }
@@ -94,15 +94,7 @@ public class SpawnManager : MonoBehaviour
             Vector3 posToSpawn = new Vector3(Random.Range(-15f, 15f), 9, 0);
             GameObject newEnemy = Instantiate(_enemies[GetRandomEnemy(_enemyWeights)], posToSpawn, Quaternion.identity);
             newEnemy.transform.parent = _enemyContainer.transform;
-
-            if (wave <= 3)
-            {
-                _uiManager.UpdateWaveText("WAVE " + wave);
-            }
-            else if (wave > 3)
-            {
-                _uiManager.UpdateWaveText("BOSS FIGHT");
-            }
+            _enemiesSpawned++;
 
             if (wave == 1)
             {
@@ -117,7 +109,7 @@ public class SpawnManager : MonoBehaviour
                 yield return new WaitForSeconds(Random.Range(0.5f, 1.0f));
             }
 
-            _enemiesSpawned++;
+
 
             if (_enemiesSpawned == 5 && wave == 1)
             {
@@ -133,7 +125,7 @@ public class SpawnManager : MonoBehaviour
 
             if (_enemiesSpawned == 15 && wave == 3)
             {
-                StartCoroutine(WaveChanger());
+                StartCoroutine(ChangeWaveToBoss());
                 yield break;
             }
 
@@ -148,20 +140,33 @@ public class SpawnManager : MonoBehaviour
 
     } // Spawns Enemies dependent on their weight value. 
 
+    IEnumerator WaveChanger()
+    {
+        Debug.Log("Wave Changer");
+        StopSpawning();
+        yield return new WaitForSeconds(10.0f);
+        wave++;
+        _enemiesSpawned = 0;
+        StartSpawning();
+    }
+
+    IEnumerator ChangeWaveToBoss()
+    {
+        Debug.Log("Wave Changer to Boss");
+        StopSpawning();
+        yield return new WaitForSeconds(30.0f);
+        wave++;
+        _enemiesSpawned = 0;
+        StartSpawning();
+    }
+
     public void SpawnBoss()
     {
         StopAllCoroutines();
         StartCoroutine(PowerUpSpawner());
         _bossEnemy1.SetActive(true);
     }
-    IEnumerator WaveChanger()
-    {
-        StopSpawning();
-        yield return new WaitForSeconds(5.0f);
-        wave++;
-        _enemiesSpawned = 0;
-        StartSpawning();
-    }
+
 
     public int GetRandomPowerUp(int[] Weights)
     {
@@ -217,7 +222,6 @@ public class SpawnManager : MonoBehaviour
     {
         if(GameManager.Instance.gameWon == true)
         {
-            //music.Stop(gameObject);
             _BGM.SetActive(false);
             _wonGameMusic.SetActive(true);
         }
