@@ -40,7 +40,6 @@ public class SpawnManager : MonoBehaviour
     private void Start()
     {
         _uiManager = GameObject.Find("UIManager").GetComponent<UIManager>();
-        //music.Post(gameObject);
         wave = 1;
     }
 
@@ -49,15 +48,15 @@ public class SpawnManager : MonoBehaviour
         StartCoroutine(SpawnEnemies());
         StartCoroutine(PowerUpSpawner());
 
-        if (wave <= 3)
-        {
-            _uiManager.UpdateWaveText("WAVE " + wave);
-        }
+        //if (wave <= 3)
+        //{
+        //    _uiManager.UpdateWaveText("WAVE " + wave);
+        //}
 
-        else if (wave > 3)
-        {
-            _uiManager.UpdateWaveText("BOSS FIGHT");
-        }
+        //else if (wave > 3)
+        //{
+        //    _uiManager.UpdateWaveText("BOSS FIGHT");
+        //}
         //stinger.Post(gameObject);
         //AkSoundEngine.SetSwitch(switchGroupName[wave - 1], switchName[1], gameObject);
     }
@@ -66,13 +65,11 @@ public class SpawnManager : MonoBehaviour
     {
         StopCoroutine(SpawnEnemies());
         StopCoroutine(PowerUpSpawner());
-        /// StopAllCoroutines();
     }
     public void PlayerDied()
     {
         playerDied = true;
         Destroy(_enemyContainer);
-        //music.Stop(gameObject);
     }
 
     IEnumerator PowerUpSpawner() //POWER UPS
@@ -81,8 +78,7 @@ public class SpawnManager : MonoBehaviour
         while (playerDied == false)
         {
             Vector3 posToSPawn = new Vector3(Random.Range(-15f, 15f), 9, 0);
-            //int randomPowerUp = Random.Range(0, 6);
-            GameObject newPowerUp = Instantiate(_powerups[GetRandomPowerUp(_puWeights)], posToSPawn, Quaternion.identity);
+             GameObject newPowerUp = Instantiate(_powerups[GetRandomPowerUp(_puWeights)], posToSPawn, Quaternion.identity);
             newPowerUp.transform.parent = _powerUpContainer.transform;
             yield return new WaitForSeconds(Random.Range(3f, 7f));
         }
@@ -98,6 +94,16 @@ public class SpawnManager : MonoBehaviour
             Vector3 posToSpawn = new Vector3(Random.Range(-15f, 15f), 9, 0);
             GameObject newEnemy = Instantiate(_enemies[GetRandomEnemy(_enemyWeights)], posToSpawn, Quaternion.identity);
             newEnemy.transform.parent = _enemyContainer.transform;
+
+            if (wave <= 3)
+            {
+                _uiManager.UpdateWaveText("WAVE " + wave);
+            }
+            else if (wave > 3)
+            {
+                _uiManager.UpdateWaveText("BOSS FIGHT");
+            }
+
             if (wave == 1)
             {
                 yield return new WaitForSeconds(Random.Range(1.5f, 2.5f));

@@ -23,7 +23,10 @@ public class UIManager : MonoBehaviour
     private TMP_Text _waveText;
     [SerializeField]
     private GameObject _waveTextPanel;
-   
+
+    [SerializeField]
+    public Slider sliderThrustAmount;
+
 
     private Player player; 
     // Start is called before the first frame update
@@ -35,6 +38,7 @@ public class UIManager : MonoBehaviour
         _gameOverText.SetActive(false);
         _restartText.SetActive(false);
         player = GameObject.Find("Player").GetComponent<Player>();
+        sliderThrustAmount.value = 1;
     }
 
     public void UpdateScore(int playerScore)

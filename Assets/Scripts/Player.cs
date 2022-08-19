@@ -60,8 +60,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int _homingAmmo;
 
-    [SerializeField]
-    private Slider slider; // TODO: put in UIManager
+   // TODO: put in UIManager
     private bool _thrusterActive = false;
     [SerializeField]
     private float _thrusterUISpeed;
@@ -93,7 +92,6 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        slider.value = 1;
         _ammo = 15;
         _homingAmmo = 5;
         _lives = 3;
@@ -155,14 +153,14 @@ public class Player : MonoBehaviour
             _thrusterActive = false;
             _thruster.SetActive(false);
 
-            if (slider.value > 0)
+            if (_uiManager.sliderThrustAmount.value > 0)
             {
 
                 _speed /= _speedMultiplier;
 
             }
 
-            if (slider.value == 0)
+            if (_uiManager.sliderThrustAmount.value == 0)
             {
                 _speed = 10;
             }
@@ -173,7 +171,7 @@ public class Player : MonoBehaviour
     {
         if(_spawnManager.playerDied == false)
         {
-            if (slider.value > 0)
+            if (_uiManager.sliderThrustAmount.value > 0)
             {
                 _thruster.SetActive(true);
                 _speed *= _speedMultiplier;
@@ -242,9 +240,9 @@ public class Player : MonoBehaviour
 
         if(_thrusterActive == true)
         {
-            if(slider.value > 0)
+            if(_uiManager.sliderThrustAmount.value > 0)
             {
-                slider.value -= _thrusterUISpeed * Time.deltaTime;
+                _uiManager.sliderThrustAmount.value -= _thrusterUISpeed * Time.deltaTime;
             }
             else
             {
@@ -252,11 +250,11 @@ public class Player : MonoBehaviour
             }
         }
         else 
-        { 
-            slider.value = slider.value;
+        {
+            _uiManager.sliderThrustAmount.value = _uiManager.sliderThrustAmount.value;
         }
 
-        if(slider.value == 0)
+        if(_uiManager.sliderThrustAmount.value == 0)
         {
             _speed = 10;
         }
@@ -410,8 +408,8 @@ public class Player : MonoBehaviour
     }
 
     public void SpeedActive()
-    { 
-        slider.value += _fuel;
+    {
+        _uiManager.sliderThrustAmount.value += _fuel;
     }
 
     private IEnumerator SpeedCoolDown()

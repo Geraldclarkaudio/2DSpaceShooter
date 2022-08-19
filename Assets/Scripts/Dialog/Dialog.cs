@@ -26,7 +26,7 @@ public abstract class Dialog : MonoBehaviour
 
     protected bool inRange;
 
-    private Player player;
+    private Player _player;
 
     //public AK.Wwise.Event dialogEvent;
     [SerializeField]
@@ -34,17 +34,17 @@ public abstract class Dialog : MonoBehaviour
     // Start is called before the first frame update
     public virtual void Start()
     {
-        player = GameObject.Find("Player").GetComponent<Player>();
+        _player = GameObject.Find("Player").GetComponent<Player>();
         dialogPanel.SetActive(false);
         dialogIsPlaying = false;
-        player.dialogIsPlaying = false; // set the player dialogplaying bool 
+        _player.dialogIsPlaying = false; // set the _player dialogplaying bool 
     }
 
     public virtual void EnterDialog(TextAsset inkJSON)
     {
         currentStory = new Story(inkJSON.text);
         dialogIsPlaying = true;
-        player.dialogIsPlaying = true; // set the player dialogplaying bool 
+        _player.dialogIsPlaying = true; // set the _player dialogplaying bool 
         dialogPanel.SetActive(true);
         inRange = false;
 
@@ -55,7 +55,7 @@ public abstract class Dialog : MonoBehaviour
     {
         //if this happens with the same button as jump make this a coroutine and wait 0.2f
         dialogIsPlaying = false;
-        player.dialogIsPlaying = false;
+        _player.dialogIsPlaying = false;
         dialogPanel.SetActive(false);
         dialogTextDisplay.text = "";
      
@@ -90,7 +90,7 @@ public abstract class Dialog : MonoBehaviour
             return;
         }
 
-        if (player.GetDialogContinuePressed())
+        if (_player.GetDialogContinuePressed())
         {
             ContinueStory();
         }
