@@ -64,6 +64,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Dialog" ID="{E77783B0-FC67-41B6-B6D6-2CC593B885FC}">
+							<ChildrenList>
+								<Action Name="" ID="{73825C43-23D9-4C35-A6C0-876FE533CA8D}" ShortID="201549767">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DialogSFX" ID="{3FA14D55-EB40-424E-8E01-BFAF7B513D22}" WorkUnitID="{773658B7-D89C-46E9-96C5-186B678C81B5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="General" ID="{2E94D43C-A364-4F79-982E-60D6D599C8C5}" ShortID="932892719">

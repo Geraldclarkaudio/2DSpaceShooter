@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 967e63db166f9a448261b67866a85a44
     GuidInternal: 
-    m_lastTime: -8585413665579071011
+    m_lastTime: -8585197751045538758
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Acoustic Textures.wwu
     PathAndIcons:
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Factory Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8585413665578981207
+    m_lastTime: -8585197751045528786
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -303,7 +303,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 2c3fdbc5be86d947afbc6094a48500f1
     GuidInternal: 
-    m_lastTime: -8585413665593342847
+    m_lastTime: -8585197751052637792
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -331,7 +331,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: bf31e59a69854c42a0ffe9e69bf3036e
     GuidInternal: 
-    m_lastTime: -8585413665579649477
+    m_lastTime: -8585197751045568683
     List: []
   - PhysicalPath: SoundBanks\General.wwu
     PathAndIcons:
@@ -344,7 +344,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\General
     guid: 382fa41f66d46d4f99d11f114c7749fa
     GuidInternal: 
-    m_lastTime: -8585413665579639494
+    m_lastTime: -8585197751045558700
     List:
     - name: General
       guid: f60930bbc9714440856d317f0d35cc04
@@ -372,7 +372,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 38f42eda31c8454fbe8f0db36a3af219
     GuidInternal: 
-    m_lastTime: -8585413665599227123
+    m_lastTime: -8585197751055360514
     List: []
   - PhysicalPath: Events\Music.wwu
     PathAndIcons:
@@ -385,8 +385,25 @@ MonoBehaviour:
     ParentPath: Events\Music
     guid: ef93af2136a4ec4aaf2a08acb6e5db5d
     GuidInternal: 
-    m_lastTime: -8585413665599217143
+    m_lastTime: -8585197735963466407
     List:
+    - name: MainMenuMusic
+      guid: 0db30584dffa85479160e48b460520ca
+      id: 1991862712
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Music
+        ObjectType: 12
+        guid: ef93af2136a4ec4aaf2a08acb6e5db5d
+      - ElementName: MainMenuMusic
+        ObjectType: 3
+        guid: 0db30584dffa85479160e48b460520ca
+      Path: Events\Music\MainMenuMusic
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Music
       guid: 5f9035f4b8181247b15f5e633162f806
       id: 3991942870
@@ -415,8 +432,28 @@ MonoBehaviour:
     ParentPath: Events\SFX
     guid: ae1118dd9977d34dbd2abe9fde25497e
     GuidInternal: 
-    m_lastTime: -8585413665599207167
+    m_lastTime: -8585197728731545436
     List:
+    - name: Dialog
+      guid: b08377e767fcb641b6d62cc593b885fc
+      id: 1235749641
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: SFX
+        ObjectType: 12
+        guid: ae1118dd9977d34dbd2abe9fde25497e
+      - ElementName: Enemy
+        ObjectType: 4
+        guid: d1ae09dc02c69c419d555590244ad854
+      - ElementName: Dialog
+        ObjectType: 3
+        guid: b08377e767fcb641b6d62cc593b885fc
+      Path: Events\SFX\Enemy\Dialog
+      maxAttenuation: 0
+      maxDuration: 0.531947
+      minDuration: 0.242677
     - name: Enemy
       guid: d1ae09dc02c69c419d555590244ad854
       id: 2299321487
@@ -620,7 +657,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 8049dcee1907f140b3eb285a367bdc14
     GuidInternal: 
-    m_lastTime: -8585413665599197196
+    m_lastTime: -8585197751055350542
     List: []
   - PhysicalPath: Game Parameters\Factory SoundSeed Air Game Syncs.wwu
     PathAndIcons:
@@ -633,7 +670,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Factory SoundSeed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8585413665599187226
+    m_lastTime: -8585197751055350542
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -787,7 +824,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 032bd6685982944aadd5a58d0dde232d
     GuidInternal: 
-    m_lastTime: -8585413665579260439
+    m_lastTime: -8585197751045538758
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -801,7 +838,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: cbccb3ed02d6ad4ebcc348080e3bd02e
     GuidInternal: 
-    m_lastTime: -8585413665579230587
+    m_lastTime: -8585197751045538758
     List: []
   - PhysicalPath: Switches\Music.wwu
     PathAndIcons:
@@ -814,7 +851,7 @@ MonoBehaviour:
     ParentPath: Switches\Music
     guid: 8f0e47a58786be4f887d9d6d46f5bc1e
     GuidInternal: 
-    m_lastTime: -8585413665579220470
+    m_lastTime: -8585197751045538758
     List:
     - name: ArticleSwitches
       guid: f27d423353a1904f8ee533bc4e1d2957
@@ -1081,7 +1118,7 @@ MonoBehaviour:
     ParentPath: Switches\PowerUps
     guid: ff7fe352ef7da041a7be90912a2ae0e1
     GuidInternal: 
-    m_lastTime: -8585413665579210648
+    m_lastTime: -8585197751045538758
     List:
     - name: PowerUps
       guid: b03d6aac6e530149b5143fd1bbaaffb5
@@ -1193,7 +1230,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 733eafdb2a08ac48a2c0d5a55230ac02
     GuidInternal: 
-    m_lastTime: -8585413665579170749
+    m_lastTime: -8585197751045538758
     List: []
   - PhysicalPath: Triggers\Music Triggers.wwu
     PathAndIcons:
@@ -1206,7 +1243,7 @@ MonoBehaviour:
     ParentPath: Triggers\Music Triggers
     guid: 0b2483e7b6140846ba89e8d8be06c874
     GuidInternal: 
-    m_lastTime: -8585413665579150802
+    m_lastTime: -8585197751045538758
     List:
     - name: Cymbal_Swell
       guid: fb8ba27eb7c5a94c8c5a23c981b79097
@@ -1223,7 +1260,7 @@ MonoBehaviour:
         guid: fb8ba27eb7c5a94c8c5a23c981b79097
       Path: Triggers\Music Triggers\Cymbal_Swell
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000a0000000b000000
+  ExpandedWaapiItemIds: 0200000004000000050000000600000007000000090000000a0000000b0000000c0000002a0000002c000000bf000000c1000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

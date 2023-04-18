@@ -14,6 +14,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="MainMenuMusic" ID="{8405B30D-FADF-4785-9160-E48B460520CA}">
+					<ChildrenList>
+						<Action Name="" ID="{0D6D7A71-4B67-43FD-9101-318ECA6F9ABC}" ShortID="491162648">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HomeBase Loop" ID="{B412AA53-E297-4E35-AF82-B3EECA9AAD5A}" WorkUnitID="{B2E37B26-3AAB-45DE-9E98-110A21726562}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

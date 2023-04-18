@@ -1,70 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\jerry\Desktop\Unity Projects\2DSpaceShooter\Space_Shooter_Wwise_Project\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\jerry\Desktop\Unity Projects\2DSpaceShooter\Space_Shooter_Wwise_Project\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\jerry\Desktop\Unity Projects\2DSpaceShooter\Space_Shooter_Wwise_Project\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\Unity Projects\2DSpaceShooter\Space_Shooter_Wwise_Project\</ProjectRoot>
+		<SourceFilesRoot>D:\Unity Projects\2DSpaceShooter\Space_Shooter_Wwise_Project\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Unity Projects\2DSpaceShooter\Space_Shooter_Wwise_Project\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\jerry\Desktop\Unity Projects\2DSpaceShooter\Space_Shooter_Wwise_Project\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Unity Projects\2DSpaceShooter\Space_Shooter_Wwise_Project\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="133642231" Language="SFX" Hash="2764276524">
+		<SoundBank Id="133642231" Language="SFX" Hash="3447253880">
 			<ObjectPath>\SoundBanks\General\General</ObjectPath>
 			<ShortName>General</ShortName>
 			<Path>General.bnk</Path>
 			<IncludedEvents>
-				<Event Id="904483370" Name="EnemyExplode" ObjectPath="\Events\SFX\Enemy\EnemyExplode" DurationType="OneShot" DurationMin="6.427094" DurationMax="9.957844">
-					<IncludedMemoryFiles>
-						<File Id="793912153" Language="SFX">
-							<ShortName>MiniBotExplode.wav</ShortName>
-							<Path>SFX\MiniBotExplode_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="3473284984" Name="EnemyLaserFire" ObjectPath="\Events\SFX\Enemy\EnemyLaserFire" DurationType="OneShot" DurationMin="1.943064" DurationMax="2.058604">
-					<IncludedMemoryFiles>
-						<File Id="88170490" Language="SFX">
-							<ShortName>LaserFire.wav</ShortName>
-							<Path>SFX\LaserFire_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="753483767" Name="Explosion1" ObjectPath="\Events\SFX\General\Explosion1" DurationType="OneShot" DurationMin="7.550994" DurationMax="8.475705">
-					<IncludedMemoryFiles>
-						<File Id="477172615" Language="SFX">
-							<ShortName>AsteroidExplode.wav</ShortName>
-							<Path>SFX\AsteroidExplode_10C4C929.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Music\Music" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="52010353" Language="SFX">
-							<ShortName>Drums.wav</ShortName>
-							<Path>SFX\Drums_D79FB2B7.wem</Path>
-						</File>
-						<File Id="184072151" Language="SFX">
-							<ShortName>Bass ARP_bip.wav</ShortName>
-							<Path>SFX\Bass ARP_bip_D79FB2B7.wem</Path>
-						</File>
-						<File Id="316594298" Language="SFX">
-							<ShortName>Pad.wav</ShortName>
-							<Path>SFX\Pad_D79FB2B7.wem</Path>
-						</File>
-						<File Id="772692241" Language="SFX">
-							<ShortName>Rhythmic trings_bip.wav</ShortName>
-							<Path>SFX\Rhythmic trings_bip_D79FB2B7.wem</Path>
-						</File>
-						<File Id="772774882" Language="SFX">
-							<ShortName>Cymbal Roll.wav</ShortName>
-							<Path>SFX\Cymbal Roll_D79FB2B7.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
-				<Event Id="740168818" Name="Play_Dialog" ObjectPath="\Events\SFX\Enemy\Play_Dialog" DurationType="OneShot" DurationMin="0.242677" DurationMax="0.531947">
+				<Event Id="1235749641" Name="Dialog" ObjectPath="\Events\SFX\Enemy\Dialog" DurationType="OneShot" DurationMin="0.242677" DurationMax="0.531947">
 					<IncludedMemoryFiles>
 						<File Id="206171326" Language="SFX">
 							<ShortName>dialogSFX03.wav</ShortName>
@@ -89,6 +41,62 @@
 						<File Id="1068474302" Language="SFX">
 							<ShortName>dialogSFX06.wav</ShortName>
 							<Path>SFX\dialogSFX06_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="904483370" Name="EnemyExplode" ObjectPath="\Events\SFX\Enemy\EnemyExplode" DurationType="OneShot" DurationMin="6.427094" DurationMax="9.957844">
+					<IncludedMemoryFiles>
+						<File Id="793912153" Language="SFX">
+							<ShortName>MiniBotExplode.wav</ShortName>
+							<Path>SFX\MiniBotExplode_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3473284984" Name="EnemyLaserFire" ObjectPath="\Events\SFX\Enemy\EnemyLaserFire" DurationType="OneShot" DurationMin="1.943064" DurationMax="2.058604">
+					<IncludedMemoryFiles>
+						<File Id="88170490" Language="SFX">
+							<ShortName>LaserFire.wav</ShortName>
+							<Path>SFX\LaserFire_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="753483767" Name="Explosion1" ObjectPath="\Events\SFX\General\Explosion1" DurationType="OneShot" DurationMin="7.550994" DurationMax="8.475705">
+					<IncludedMemoryFiles>
+						<File Id="477172615" Language="SFX">
+							<ShortName>AsteroidExplode.wav</ShortName>
+							<Path>SFX\AsteroidExplode_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1991862712" Name="MainMenuMusic" ObjectPath="\Events\Music\MainMenuMusic" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="1071022292" Language="SFX">
+							<ShortName>HomeBase Loop.wav</ShortName>
+							<Path>SFX\HomeBase Loop_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Music\Music" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="52010353" Language="SFX">
+							<ShortName>Drums.wav</ShortName>
+							<Path>SFX\Drums_D79FB2B7.wem</Path>
+						</File>
+						<File Id="184072151" Language="SFX">
+							<ShortName>Bass ARP_bip.wav</ShortName>
+							<Path>SFX\Bass ARP_bip_D79FB2B7.wem</Path>
+						</File>
+						<File Id="316594298" Language="SFX">
+							<ShortName>Pad.wav</ShortName>
+							<Path>SFX\Pad_D79FB2B7.wem</Path>
+						</File>
+						<File Id="772692241" Language="SFX">
+							<ShortName>Rhythmic trings_bip.wav</ShortName>
+							<Path>SFX\Rhythmic trings_bip_D79FB2B7.wem</Path>
+						</File>
+						<File Id="772774882" Language="SFX">
+							<ShortName>Cymbal Roll.wav</ShortName>
+							<Path>SFX\Cymbal Roll_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

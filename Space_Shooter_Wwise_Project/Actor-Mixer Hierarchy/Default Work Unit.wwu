@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B2E37B26-3AAB-45DE-9E98-110A21726562}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{B2E37B26-3AAB-45DE-9E98-110A21726562}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B2E37B26-3AAB-45DE-9E98-110A21726562}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="HomeBase Loop" ID="{B412AA53-E297-4E35-AF82-B3EECA9AAD5A}" ShortID="771397736">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83E48073-DCB4-4180-8744-C4734CA7D463}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C5DB3F2C-86BE-47D9-AFBC-6094A48500F1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="HomeBase Loop" ID="{D2E7DF65-1C1D-4CB7-B4F1-51ECDB3AF290}">
+							<Language>SFX</Language>
+							<AudioFile>HomeBase Loop.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1071022292"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="HomeBase Loop" ID="{D2E7DF65-1C1D-4CB7-B4F1-51ECDB3AF290}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>
